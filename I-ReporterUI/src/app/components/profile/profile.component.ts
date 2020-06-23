@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ProfileService} from 'src/app/services/profile.service'
+import { ProfileService} from 'src/app/services/profile.service';
+
 
 @Component({
   selector: 'app-profile',
@@ -19,6 +20,7 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
   }
+
   saveProfile(){
     const data={
       profile_picture: this.profile.profile_picture,
@@ -34,7 +36,7 @@ export class ProfileComponent implements OnInit {
       console.log(error)
     })
   }
-  
+
   newProfile(){
     this.submitted=false;
     this.profile={
