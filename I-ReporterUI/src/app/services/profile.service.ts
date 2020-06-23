@@ -15,4 +15,8 @@ export class ProfileService {
   get(id){
     return this.http.get(`${SingleProfileUrl}/${id}`);
   }
+
+  create(data){
+    return this.http.post(AllProfilesUrl,data)
+  }
 }
