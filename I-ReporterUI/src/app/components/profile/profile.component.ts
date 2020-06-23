@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProfileService} from 'src/app/services/profile.service'
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +8,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  profile = {
+    profile_picture:'',
+    bio:'',
+    contacts:''
+  };
+  submitted = false;
 
-  ngOnInit(): void {
+  constructor(private profileService: ProfileService) { }
+
+  ngOnInit() {
   }
-
+  saveProfile(){
+    const data={
+      profile_picture: this.profile.profile_picture,
+      bio: this.profile.bio,
+      contacts: this.profile.contacts
+    };
+    
+    this.profileService.create(data).subscribe(response => {
+      console.log(response);
+      this.submitted = true;
+      },
+    error => {
+      console.log(error)
+    })
+  }
+  
+  newProfile(){
+    this.submitted=false;
+    this.profile={
+      profile_picture:'',
+      bio:'',
+      contacts:''
+    };
+  }
 }
