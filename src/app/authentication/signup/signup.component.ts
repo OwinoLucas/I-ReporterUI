@@ -45,8 +45,7 @@ export class SignupComponent implements OnInit {
                           Validators.minLength(8),
                         ]],
           confirmPassword: ['', [ Validators.required,
-                                  Validators.nullValidator,
-                                  Validators.minLength(8),
+                                  Validators.nullValidator
                                 ]],
       })
       this.newUserForm.valueChanges.subscribe(console.log)
