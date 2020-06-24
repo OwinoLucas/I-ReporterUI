@@ -14,23 +14,23 @@
           </div>
           <div class="form-group">
             <label class="control-label" for="lastName">Last name</label>
-            <input id="lastName" type="text" class="form-control">
+            <input id="lastName" type="text" class="form-control" formControlName="lastName">
           </div>
           <div class="form-group">
             <label class="control-label" for="userName">User name</label>
-            <input id="userName" type="text" class="form-control">
+            <input id="userName" type="text" class="form-control" formControlName="userName">
           </div>
           <div class="form-group">
             <label class="control-label" for="signupEmail">Email</label>
-            <input id="signupEmail" type="email" class="form-control">
+            <input id="signupEmail" type="email" class="form-control" formControlName="email">
           </div>
           <div class="form-group">
             <label class="control-label" for="signupPassword">Password</label>
-            <input id="signupPassword" type="password" class="form-control" placeholder="at least 6 characters" >
+            <input id="signupPassword" type="password" class="form-control" placeholder="at least 6 characters" formControlName="password">
           </div>
           <div class="form-group">
             <label class="control-label" for="signupPasswordagain">Password again</label>
-            <input id="signupPasswordagain" type="password" class="form-control">
+            <input id="signupPasswordagain" type="password" class="form-control" formControlName="confirmPassword">
           </div>
           <div class="form-group">
             <button id="signupSubmit" type="submit" class="btn btn-info btn-block">Create your account</button>
