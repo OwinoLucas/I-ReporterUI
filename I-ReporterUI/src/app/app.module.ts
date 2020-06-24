@@ -7,7 +7,7 @@ import { GoogleMapsModule } from '@angular/google-maps'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddInterventionRecordComponent } from './components/add-intervention-record/add-intervention-record.component';
-
+import { AgmCoreModule} from '@agm/core';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +18,10 @@ import { AddInterventionRecordComponent } from './components/add-intervention-re
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    AgmCoreModule.forRoot({
+      apiKey:'AIzaSyAU4NQxFttNiM906LqaPSb3xrjOyzhvE9E'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

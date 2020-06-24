@@ -20,20 +20,35 @@
 <body>
   <app-root></app-root>
   <div id="mapid" style="width: 600px; height: 600px"></div>
-  <script>
-    var mymap = L.map('mapid').locate({setView:true},13);
+  <!-- <script>
+    // var mymap = L.map('mapid').locate({setView:true},13);
+    var mymap=L.map('mapid').locate({setView: true, watch: true}) /* This will return map so you can do chaining */
+        .on('locationfound', function(e){
+            var marker = L.marker([e.latitude, e.longitude],{color:'green'}).bindPopup('Your are here :)').openPopup();
+            var circle = L.circle([e.latitude, e.longitude], e.accuracy/2, {
+                weight: 1,
+                color: 'blue',
+                fillColor: '#cacaca',
+                fillOpacity: 0.2
+            });
+            mymap.addLayer(marker);
+            mymap.addLayer(circle);
+        })
+       .on('locationerror', function(e){
+            console.log(e);
+            alert("Location access denied.");
+        });
 
-    var marker = L.marker([-1.1370495999999999, 36.9721344]).addTo(mymap);
-    var marker2 = L.marker([-1.045620, 37.075142]).addTo(mymap);
-    
+    // var marker = L.marker([-1.1370495999999999, 36.9721344]).addTo(mymap);
+    // var marker2 = L.marker([-1.045620, 37.075142]).addTo(mymap);
+    // marker.bindPopup('THis is your current Location').openPopup;
     var layerGroup=L.layerGroup().addTo(mymap);
     
     mymap.on('click',function(e){
-      layerGroup.clearLayers()
+      layerGroup.clearLayers();
       mymap.closePopup();
       var poplocation=e.latlng;
-      var marker=L.marker([e.latlng.lat,e.latlng.lng]).addTo(layerGroup);
-      marker.bindPopup('title').openPopup
+      var marke=L.marker([e.latlng.lat,e.latlng.lng]).addTo(layerGroup).bindPopup('THIS WILL DISPLAY TITLE OF INTERVENTION').openPopup();
       console.log(marker)
     }
     );
@@ -55,7 +70,7 @@
       tileSize: 512,
       zoomOffset: -1,
       accessToken: 'pk.eyJ1IjoibWFuYXNzZWgtYnVuZGkiLCJhIjoiY2tic2o3NDhzMDBrYjMwcGNmb25xMHM0NSJ9.kVriGDikLqxj-clR6j8Kxg'
-    }).addTo(mymap); </script>
+    }).addTo(mymap); </script> -->
 </body>
 
 </html>
