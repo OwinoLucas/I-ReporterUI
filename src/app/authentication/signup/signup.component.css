@@ -21,3 +21,7 @@ h2 {
 .left { float: left; }
 
 .right { float: right; }
+
+.invalidInput{
+  color: #d93025;
+}
