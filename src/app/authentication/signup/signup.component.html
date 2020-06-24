@@ -4,7 +4,7 @@
   <div class="row">
     <div class="panel panel-primary">
       <div class="panel-body">
-        <form [formGroup]="newUserForm" role="form">
+        <form [formGroup]="newUserForm" role="form" (ngSubmit)="onSubmit(newUserForm)">
           <div class="form-group">
             <h2>Create account</h2>
           </div>
