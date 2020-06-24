@@ -130,6 +130,26 @@
           <div class="form-group">
             <label class="control-label" for="signupPasswordagain">Password again</label>
             <input id="signupPasswordagain" type="password" class="form-control" formControlName="confirmPassword">
+            <div class="invalidInput" *ngIf="(
+                                            newUserForm.controls['confirmPassword'].hasError('required') || 
+                                            newUserForm.controls['confirmPassword'].hasError('nullvalidator') ||
+                                            newUserForm.controls['confirmPassword'].value != newUserForm.controls['password'].value
+                                          ) &&
+                                          newUserForm.controls['confirmPassword'].touched">
+              <div>
+                <span><svg aria-hidden="true" fill="currentColor" focusable="false" width="16px" height="16px"
+                    viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+                    </path>
+                  </svg></span>
+                <span
+                  *ngIf="newUserForm.controls['confirmPassword'].hasError('required') || newUserForm.controls['confirmPassword'].hasError('nullvalidator')">Enter the password again..</span>
+
+                <span *ngIf="newUserForm.controls['confirmPassword'].value != newUserForm.controls['password'].value">Password does't match.</span>
+              </div>
+            </div>
+
           </div>
           <div class="form-group">
             <button id="signupSubmit" type="submit" class="btn btn-info btn-block">Create your account</button>
