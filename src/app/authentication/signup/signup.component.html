@@ -30,14 +30,15 @@
                   name is required.</span>
 
                 <span *ngIf="newUserForm.controls['firstName'].hasError('maxlength')">First name is too long.</span>
-              </div>  
+              </div>
             </div>
-           
+
           </div>
           <div class="form-group">
             <label class="control-label" for="lastName">Last name</label>
             <input id="lastName" type="text" class="form-control" formControlName="lastName">
-            <div class="invalidInput" *ngIf="(newUserForm.controls['lastName'].hasError('maxlength')) && newUserForm.controls['lastName'].touched">
+            <div class="invalidInput"
+              *ngIf="(newUserForm.controls['lastName'].hasError('maxlength')) && newUserForm.controls['lastName'].touched">
               <div>
                 <span><svg aria-hidden="true" fill="currentColor" focusable="false" width="16px" height="16px"
                     viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
@@ -47,7 +48,7 @@
                   </svg></span>
 
                 <span *ngIf="newUserForm.controls['lastName'].hasError('maxlength')">Last name is too long.</span>
-              </div>  
+              </div>
             </div>
           </div>
           <div class="form-group">
@@ -68,12 +69,12 @@
                   </svg></span>
                 <span
                   *ngIf="newUserForm.controls['userName'].hasError('required') || newUserForm.controls['userName'].hasError('nullvalidator')">Username
-                   is required.</span>
+                  is required.</span>
 
                 <span *ngIf="newUserForm.controls['userName'].hasError('maxlength')">Username is too long.</span>
-              </div>  
+              </div>
             </div>
-           
+
           </div>
           <div class="form-group">
             <label class="control-label" for="signupEmail">Email</label>
@@ -92,18 +93,39 @@
                     </path>
                   </svg></span>
                 <span
-                  *ngIf="newUserForm.controls['email'].hasError('required') || newUserForm.controls['email'].hasError('nullvalidator')">Email 
+                  *ngIf="newUserForm.controls['email'].hasError('required') || newUserForm.controls['email'].hasError('nullvalidator')">Email
                   is required.</span>
 
-                <span *ngIf="newUserForm.controls['email'].hasError('email')">Kindly provide a valid email <address></address>.</span>
-              </div>  
+                <span *ngIf="newUserForm.controls['email'].hasError('email')">Kindly provide a valid email <address>
+                  </address>.</span>
+              </div>
             </div>
-           
+
           </div>
           <div class="form-group">
             <label class="control-label" for="signupPassword">Password</label>
             <input id="signupPassword" type="password" class="form-control" placeholder="at least 6 characters"
               formControlName="password">
+            <div class="invalidInput" *ngIf="(
+                                              newUserForm.controls['password'].hasError('required') || 
+                                              newUserForm.controls['password'].hasError('nullvalidator') ||
+                                              newUserForm.controls['password'].hasError('minlength')
+                                            ) &&
+                                            newUserForm.controls['password'].touched">
+              <div>
+                <span><svg aria-hidden="true" fill="currentColor" focusable="false" width="16px" height="16px"
+                    viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+                    </path>
+                  </svg></span>
+                <span
+                  *ngIf="newUserForm.controls['password'].hasError('required') || newUserForm.controls['password'].hasError('nullvalidator')">Password is required.</span>
+
+                <span *ngIf="newUserForm.controls['password'].hasError('minlength')">Password is too short.</span>
+              </div>
+            </div>
+
           </div>
           <div class="form-group">
             <label class="control-label" for="signupPasswordagain">Password again</label>
