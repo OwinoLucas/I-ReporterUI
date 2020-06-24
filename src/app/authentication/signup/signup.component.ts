@@ -22,33 +22,34 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
    this.newUserForm = this.formBuilder.group({
-      firstName: ['', [
-                        Validators.required, 
-                        Validators.maxLength(32),
-                        Validators.nullValidator
-                      ]
-                 ],
-      lastName: ['', Validators.maxLength(32)],
-      userName: ['', [
-                        Validators.required, 
-                        Validators.maxLength(32),
-                        Validators.nullValidator,
-                     ]
-                ],
-      email: ['', [Validators.required,
-                  Validators.nullValidator,
-                  Validators.email
-                  ]
-              ],
-      password: ['', [Validators.required,
+          firstName: ['', [
+                            Validators.required, 
+                            Validators.maxLength(32),
+                            Validators.nullValidator
+                          ]
+                    ],
+          lastName: ['', Validators.maxLength(32)],
+          userName: ['', [
+                            Validators.required, 
+                            Validators.maxLength(32),
+                            Validators.nullValidator,
+                        ]
+                    ],
+          email: ['', [Validators.required,
                       Validators.nullValidator,
-                      Validators.minLength(8),
-                    ]],
-      confirmPassword: ['', [ Validators.required,
-                              Validators.nullValidator,
-                              Validators.minLength(8),
-                            ]],
-   })
+                      Validators.email
+                      ]
+                  ],
+          password: ['', [Validators.required,
+                          Validators.nullValidator,
+                          Validators.minLength(8),
+                        ]],
+          confirmPassword: ['', [ Validators.required,
+                                  Validators.nullValidator,
+                                  Validators.minLength(8),
+                                ]],
+      })
+      this.newUserForm.valueChanges.subscribe(console.log)
   }
 
 }
