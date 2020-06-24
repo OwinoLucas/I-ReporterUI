@@ -78,6 +78,27 @@
           <div class="form-group">
             <label class="control-label" for="signupEmail">Email</label>
             <input id="signupEmail" type="email" class="form-control" formControlName="email">
+            <div class="invalidInput" *ngIf="(
+                                            newUserForm.controls['email'].hasError('required') || 
+                                            newUserForm.controls['email'].hasError('nullvalidator') ||
+                                            newUserForm.controls['email'].hasError('email')
+                                          ) &&
+                                          newUserForm.controls['email'].touched">
+              <div>
+                <span><svg aria-hidden="true" fill="currentColor" focusable="false" width="16px" height="16px"
+                    viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+                    </path>
+                  </svg></span>
+                <span
+                  *ngIf="newUserForm.controls['email'].hasError('required') || newUserForm.controls['email'].hasError('nullvalidator')">Email 
+                  is required.</span>
+
+                <span *ngIf="newUserForm.controls['email'].hasError('email')">Kindly provide a valid email <address></address>.</span>
+              </div>  
+            </div>
+           
           </div>
           <div class="form-group">
             <label class="control-label" for="signupPassword">Password</label>
