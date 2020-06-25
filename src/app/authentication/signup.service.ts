@@ -16,7 +16,7 @@ export class SignupService {
     return this.httpclient.post(
       signupAPI,
       newUserDetails,
-      {headers: this.httpheaders}
+      {headers: this.httpheaders, observe: 'response'}
     )
   }
 
