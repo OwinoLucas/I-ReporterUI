@@ -61,15 +61,11 @@ export class SignupComponent implements OnInit {
     }
     this.signupService.createNewUser( newUser ).subscribe(
       (data)=> {
-        // console.log(Object.keys(data))
-        // console.log(data['status'])
-        // consol
         switch(data['status']){
           case 201:
             this.displayAccountSuccessfullyCreatedSection = true;
             break;
         }
-        // console.log(data)
       },
       (err)=> {},
     )
