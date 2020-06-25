@@ -8,10 +8,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddInterventionRecordComponent } from './components/add-intervention-record/add-intervention-record.component';
 import { AgmCoreModule} from '@agm/core';
+import { InterventionRecordListComponent } from './components/intervention-record-list/intervention-record-list.component';
 @NgModule({
   declarations: [
     AppComponent,
-    AddInterventionRecordComponent
+    AddInterventionRecordComponent,
+    InterventionRecordListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 import { Component, OnInit ,AfterViewInit} from '@angular/core';
-import {InterventionrecordService } from 'src/app/services/interventionrecord.service'
+import {InterventionRecordService } from 'src/app/services/interventionrecord.service'
 import { } from '@angular/core'
 import { DecimalPipe } from '@angular/common';
 
@@ -36,7 +36,7 @@ export class AddInterventionRecordComponent implements OnInit {
   
   submitted=false;
 
-  constructor(private interventionrecordService:InterventionrecordService) { }
+  constructor(private interventionrecordService:InterventionRecordService) { }
 
   ngOnInit(): void {
 
