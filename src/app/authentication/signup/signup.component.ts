@@ -6,6 +6,7 @@ import {
   FormControl,
   FormBuilder
 } from '@angular/forms';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-signup',
@@ -14,6 +15,7 @@ import {
 })
 export class SignupComponent implements OnInit {
   newUserForm: FormGroup;
+  submitted = false;
   
   
   constructor(
@@ -29,12 +31,6 @@ export class SignupComponent implements OnInit {
                           ]
                     ],
           lastName: ['', Validators.maxLength(32)],
-          userName: ['', [
-                            Validators.required, 
-                            Validators.maxLength(32),
-                            Validators.nullValidator,
-                        ]
-                    ],
           email: ['', [Validators.required,
                       Validators.nullValidator,
                       Validators.email
@@ -49,6 +45,12 @@ export class SignupComponent implements OnInit {
                                 ]],
       })
       this.newUserForm.valueChanges.subscribe(console.log)
+  }
+  onSubmit(signUpForm: FormGroup){
+    this.submitted = true;
+    if (signUpForm.invalid) {
+      return;
+    }
   }
 
 }
