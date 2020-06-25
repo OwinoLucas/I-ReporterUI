@@ -30,13 +30,25 @@ export class InterventionRecordDetailsComponent implements OnInit {
         });
     }
     confirmdelete(event){
-      var r=confirm('Are you sure to dlete?');
+      var r=confirm('Are you sure to delete?');
       if (r ==true){
         this.deleteIntervention()
       }
       else{
         alert('nothing done')
       }
+    }
+    updaterecord(){
+      this.interventionrecordservice.putrecord(this.intervention_record.id,this.intervention_record)
+      .subscribe(
+        data=>{
+          console.log(data)
+          alert('Editted succesfully!')
+        },
+        error=>{
+          console.log(error.error)
+        }
+      )
     }
     deleteIntervention(){
       this.interventionrecordservice.delete(this.intervention_record.id)

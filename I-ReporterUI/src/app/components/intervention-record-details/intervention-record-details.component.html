@@ -1,11 +1,10 @@
-<p>intervention-record-details works!</p>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
 <!-- details card section starts from here -->
-<section class="details-card">
+<!-- <section class="details-card">
     <div class="container">
         <div class="row">
             <div class="col-md-4" *ngIf ="intervention_record">
@@ -24,78 +23,119 @@
             
         </div>
     </div>
-</section>
+</section> -->
 <!-- ?\************************************************ -->
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+  integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 <div class="container-fluid">
   <div class="row">
-    
-    <div class="col-md-4 mt-5" *ngIf ="intervention_record">
+
+    <div class="col-md-4 mt-5" *ngIf="intervention_record">
       <div class="card text-center">
         <img class="card-img-top" src="{{intervention_record.image}}" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">{{intervention_record.id}}:{{intervention_record.title}}</h5>
           <hr>
           <p>
-            <a class="btn btn-primary" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <a class="btn btn-primary" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"
+              role="button" aria-expanded="false" aria-controls="collapseExample">
               <i class="fas fa-map"></i> Maps
             </a>
-            <button class="btn btn-danger" data-target="collapseExample" data-target="collapse" type="button"> MAAAAPS</button>
-            
+            <!-- <button class="btn btn-danger" data-target="collapseExample" data-target="collapse" type="button"> MAAAAPS</button> -->
+
             <!-- <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Launch Me</button> -->
           </p>
           <div class="collapse" id="collapseExample">
-            
+
           </div>
         </div>
         <div class="card-footer text-muted">
           <div class="row">
             <div class="col">
-              <a href=""><i class="fas fa-map"></i></a>
+              <!-- <a href=""><i class="fas fa-map"></i></a> -->
             </div>
             <div class="col">
-              <a href="mailto:test@test.com"><i class="fas fa-envelope"></i></a>
+              <!-- <a href="mailto:test@test.com"><i class="fas fa-envelope"></i></a> -->
+              <a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Edit</a>
             </div>
             <div class="col">
-              <a href="tel:+123456789"><i class="fas fa-phone"></i></a>
-              <button class="btn btn-default" data-dismiss="modal" (click)='confirmdelete($event)'>DELETE</button>
+              <!-- <button class="btn btn-default" data-dismiss="modal" (click)='confirmdelete($event)'>DELETE</button> -->
+              <a  href="" (click)='confirmdelete($event)'><svg class="bi bi-trash" style="color: red;" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+              </svg>&nbsp;<span style="color: red;">DELETE</span> </a>
+              
+              
 
             </div>
           </div>
         </div>
       </div>
     </div>
-   
+
   </div>
 
-<br>
-<div class="row text-center bg-success text-white" id="author">
+  <br>
+  <!-- <div class="row text-center bg-success text-white" id="author">
   <div class="col-12 mt-4 h3 ">
   <a href="#">by P. Fattoruso</a>
 </div>
 <div class="col-12 my-2">
 <a href="https://www.linkedin.com/in/paolofattoruso/" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
 </div>
-</div>
+</div> -->
 </div>
 
 <!-- ****************************** modal class -->
 <div class="container">
 
-	<div class="container">
-  <h2>Modal Example</h2>
-  <!-- Trigger the modal with a button -->
-  
+  <div class="container">
+    <!-- <h2>Modal Example</h2> -->
+    <!-- Trigger the modal with a button -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">×</button>
+            <h4 class="modal-title">Location for:{{intervention_record.title}}</h4>
+          </div>
+          <div class="modal-body">
+            <div class="card card-body">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11880.492291371422!2d12.4922309!3d41.8902102!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x28f1c82e908503c4!2sColosseo!5e0!3m2!1sit!2sit!4v1524815927977"
+                width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<!-- *******************************edit modal**************** -->
+<div class="container"></div>
+
+<div class="container">
 
   <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
+  <div class="editmodal fade" id="editmyModal" role="dialog">
     <div class="modal-dialog">
-    
+
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
@@ -104,17 +144,38 @@
         </div>
         <div class="modal-body">
           <div class="card card-body">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11880.492291371422!2d12.4922309!3d41.8902102!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x28f1c82e908503c4!2sColosseo!5e0!3m2!1sit!2sit!4v1524815927977" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <!-- ^^^^^^^^^^^^^^^^^^^^^ -->
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">Location for:{{intervention_record.title}}</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="card card-body">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11880.492291371422!2d12.4922309!3d41.8902102!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x28f1c82e908503c4!2sColosseo!5e0!3m2!1sit!2sit!4v1524815927977"
+                        width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+
+              </div>
+            </div> <!-- *******endofform -->
           </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
-      
+
     </div>
   </div>
-  
-</div>
 
 </div>
