@@ -16,4 +16,7 @@ export class InterventionRecordService {
   getAll(){
     return this.http.get(`${baseUrl}all-intervention-records/`)
   }
+  get(id){
+    return this.http.get(`${baseUrl}intervention-record-detail/${id}`);
+  }
 }

@@ -9,11 +9,13 @@ import { AppComponent } from './app.component';
 import { AddInterventionRecordComponent } from './components/add-intervention-record/add-intervention-record.component';
 import { AgmCoreModule} from '@agm/core';
 import { InterventionRecordListComponent } from './components/intervention-record-list/intervention-record-list.component';
+import { InterventionRecordDetailsComponent } from './components/intervention-record-details/intervention-record-details.component';
 @NgModule({
   declarations: [
     AppComponent,
     AddInterventionRecordComponent,
-    InterventionRecordListComponent
+    InterventionRecordListComponent,
+    InterventionRecordDetailsComponent
   ],
   imports: [
     BrowserModule,
