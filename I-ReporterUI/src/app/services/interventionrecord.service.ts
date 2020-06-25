@@ -19,4 +19,7 @@ export class InterventionRecordService {
   get(id){
     return this.http.get(`${baseUrl}intervention-record-detail/${id}`);
   }
+  delete(id){
+    return this.http.delete(`${baseUrl}intervention-record-detail/${id}`)
+  }
 }

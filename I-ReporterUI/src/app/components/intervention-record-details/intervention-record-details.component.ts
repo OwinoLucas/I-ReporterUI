@@ -29,5 +29,25 @@ export class InterventionRecordDetailsComponent implements OnInit {
           console.log(error);
         });
     }
+    confirmdelete(event){
+      var r=confirm('Are you sure to dlete?');
+      if (r ==true){
+        this.deleteIntervention()
+      }
+      else{
+        alert('nothing done')
+      }
+    }
+    deleteIntervention(){
+      this.interventionrecordservice.delete(this.intervention_record.id)
+      .subscribe(
+        data=>{
+          console.log(data);
+          this.router.navigate(['intervention-record/all']);
+        },
+        error=>{
+          console.log(error)
+        });
+    }
 
 }
