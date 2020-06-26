@@ -23,10 +23,7 @@
 
 
     <button (click)="saveInterventionRecord()" class="btn btn-danger">Submit</button>
-  </div>
-
-
-  <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChoseLocation($event)">
+    <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChoseLocation($event)">
       <agm-marker 
       [latitude]="latitude" 
       [longitude]="longitude"
@@ -34,6 +31,10 @@
       style="color: black;"
       ></agm-marker>
   </agm-map>
+  </div>
+
+
+  
   <!-- <div *ngIf="submitted">
       <h4>You submitted successfully!</h4>
       <button class="btn btn-success" (click)="newIntervention()">Add</button>

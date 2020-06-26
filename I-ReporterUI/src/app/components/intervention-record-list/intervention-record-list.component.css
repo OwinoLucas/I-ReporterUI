@@ -1,11 +1,16 @@
 /* card details start  */
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto+Condensed:400,400i,700,700i');
-
+.main-header{
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 50px;
+    text-align: center;
+  }
 section{
     padding: 100px 0;
 }
 .details-card {
-	background: #ecf0f1;
+    background: #ecf0f1;
+    
 }
 
 .card-content {

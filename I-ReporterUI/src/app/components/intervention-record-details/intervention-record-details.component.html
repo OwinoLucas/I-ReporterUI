@@ -1,37 +1,3 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
-<!-- details card section starts from here -->
-<!-- <section class="details-card">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4" *ngIf ="intervention_record">
-                <div class="card-content">
-                    <div class="card-img">
-                        <img src="{{intervention_record.image}}" alt="">
-                        <span><h4>{{intervention_record.id}}{{intervention_record.title}}</h4></span>
-                    </div>
-                    <div class="card-desc">
-                        <h3>{{intervention_record.title}}</h3>
-                        <p>{{intervention_record.description}}</p>
-                            <a href="#" class="btn-card">Read</a>   
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-</section> -->
-<!-- ?\************************************************ -->
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
-  integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 <div class="" style="margin-left: 30%;width: 2000px;">
   <div class="row">
 
@@ -41,21 +7,28 @@
         <div class="card-body">
           <h5 class="card-title">{{intervention_record.title}}</h5>
           <hr>
-          <p>{{intervention_record.description}}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum metus elit, finibus et hendrerit sollicitudin, condimentum in ipsum. Ut vulputate interdum mi, nec mattis ipsum ornare in. Donec non efficitur arcu. Mauris ex massa, facilisis id tincidunt non, mollis at nisl. Cras in risus sit amet arcu interdum molestie. Fusce sem nulla, pulvinar ut pulvinar porttitor, vulputate eleifend lectus. Vestibulum fringilla, mi sit amet convallis malesuada, nibh augue ullamcorper sapien, vitae lobortis dui dolor ut nisi. Nullam euismod ligula eget maximus convallis. Sed ligula ipsum, vulputate vitae porta sed, finibus sit amet dolor. Nam cursus, dui eget finibus fermentum, erat elit euismod turpis, a luctus enim enim et est. Etiam eget scelerisque odio. Ut a justo et odio rhoncus gravida. Nullam finibus tempus leo, auctor pharetra elit pretium nec. Ut mauris velit, convallis sit amet lacinia feugiat, fringilla ornare nisi. Morbi nisl turpis, pretium a justo eu, consectetur maximus ligula.
+          <p>{{intervention_record.description}}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+            metus elit, finibus et hendrerit sollicitudin, condimentum in ipsum. Ut vulputate interdum mi, nec mattis
+            ipsum ornare in. Donec non efficitur arcu. Mauris ex massa, facilisis id tincidunt non, mollis at nisl. Cras
+            in risus sit amet arcu interdum molestie. Fusce sem nulla, pulvinar ut pulvinar porttitor, vulputate
+            eleifend lectus. Vestibulum fringilla, mi sit amet convallis malesuada, nibh augue ullamcorper sapien, vitae
+            lobortis dui dolor ut nisi. Nullam euismod ligula eget maximus convallis. Sed ligula ipsum, vulputate vitae
+            porta sed, finibus sit amet dolor. Nam cursus, dui eget finibus fermentum, erat elit euismod turpis, a
+            luctus enim enim et est. Etiam eget scelerisque odio. Ut a justo et odio rhoncus gravida. Nullam finibus
+            tempus leo, auctor pharetra elit pretium nec. Ut mauris velit, convallis sit amet lacinia feugiat, fringilla
+            ornare nisi. Morbi nisl turpis, pretium a justo eu, consectetur maximus ligula.
 
-             </p>
+          </p>
           <p>
             <a class="btn btn-primary" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"
               role="button" aria-expanded="false" aria-controls="collapseExample">
               <i class="fas fa-map"></i> Maps
             </a>
-            <a class="btn btn-primary" style="margin-left: 10px;" class="btn btn-info btn-lg" data-toggle="modal" data-target="#videomodal"
-              role="button" aria-expanded="false" aria-controls="collapseExample">
+            <a class="btn btn-primary" style="margin-left: 10px;" class="btn btn-info btn-lg" data-toggle="modal"
+              data-target="#videomodal" role="button" aria-expanded="false" aria-controls="collapseExample">
               <i class="fas fa-map"></i> video
             </a>
-            <!-- <button class="btn btn-danger" data-target="collapseExample" data-target="collapse" type="button"> MAAAAPS</button> -->
 
-            <!-- <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Launch Me</button> -->
           </p>
           <div class="collapse" id="collapseExample">
 
@@ -64,23 +37,26 @@
         <div class="card-footer text-muted">
           <div class="row">
             <div class="col">
-              <!-- <a href=""><i class="fas fa-map"></i></a> -->
+              <a href="" style="color:green;"><i class="fas fa-check"></i> <span> RESOLVED</span> </a>
             </div>
             <div class="col">
               <!-- <a href="mailto:test@test.com"><i class="fas fa-envelope"></i></a> -->
-             
-              <a href="" data-toggle="modal" data-target="#bd-example-modal-lg">
+
+              <a style="color:blue;" href="" data-toggle="modal" data-target="#bd-example-modal-lg">
                 <i class="fa fa-cog" aria-hidden="true"></i> Edit</a>
-                <!-- <button type="button" class="btn btn-primary" >Large modal</button> -->
+              <!-- <button type="button" class="btn btn-primary" >Large modal</button> -->
             </div>
             <div class="col">
-              <!-- <button class="btn btn-default" data-dismiss="modal" (click)='confirmdelete($event)'>DELETE</button> -->
-              <a  href="" (click)='confirmdelete($event)'><svg class="bi bi-trash" style="color: red;" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
-                <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
-              </svg>&nbsp;<span style="color: red;">DELETE</span> </a>
-              
-              
+
+              <a href="" (click)='confirmdelete($event)'><svg class="bi bi-trash" style="color: red;" width="1em"
+                  height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                  <path fill-rule="evenodd"
+                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                </svg>&nbsp;<span style="color: red;">DELETE</span> </a>
+
+
 
             </div>
           </div>
@@ -135,91 +111,75 @@
 <!-- testing -->
 
 
-<div class="modal fade " id="bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade " id="bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="row" id="contatti" *ngIf="intervention_record" class="edit-form">
-        <div class="container mt-5" >
-        
-            <div class="row" style="height:550px;">
-              <div class="col-md-6 maps" >
-                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11880.492291371422!2d12.4922309!3d41.8902102!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x28f1c82e908503c4!2sColosseo!5e0!3m2!1sit!2sit!4v1524815927977" frameborder="0" style="border:0" allowfullscreen></iframe>
-              </div>
-              <div class="col-md-6">
-                <h2 class="text-uppercase mt-3 font-weight-bold text-white">UPDATE </h2>
-                <form action="">
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <div class="form-group">
-                        <input 
-                        type="text"
-                        class="form-control"
-                        id="title"
-                        [(ngModel)]="intervention_record.title"
-                        name="title"
-                        class="form-control mt-2" 
-                        placeholder="Nome/Società" required>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="form-group">
-                        <input
-                        type="file"
-                          id="image"
-                          name="image"
-                          placeholder="ED" 
-                          required>
-                          <label for="image"><a href="{{intervention_record.image}}">IMAGE LINK</a></label>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="form-group">
-                        <input
-                        type="file"
-                          id="image"
-                          name="image"
-                          placeholder="ED" 
-                          required>
-                          <label for="image"><a href="{{intervention_record.image}}">IMAGE LINK</a></label>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="form-group" id="exampleFormControlTextarea1">
-                        <textarea
-                         type="text"
-                        
-                         id="description"
-                         [(ngModel)]="intervention_record.description" 
-                         name="description"
-                         class="form-control mt-2"
-                          placeholder="Description...." rows="3" required></textarea>
-                      </div>
-                    </div>
-                    
-                    
-                  
-                    <div class="col-12">
-                      <button class="btn btn-light" type="submit" (click)="updaterecord()">Update</button>
+        <div class="container mt-5">
+
+          <div class="row" style="height:550px;">
+            <div class="col-md-6 maps">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11880.492291371422!2d12.4922309!3d41.8902102!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x28f1c82e908503c4!2sColosseo!5e0!3m2!1sit!2sit!4v1524815927977"
+                frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-6">
+              <h2 class="text-uppercase mt-3 font-weight-bold text-white">UPDATE </h2>
+              <form action="">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="title" [(ngModel)]="intervention_record.title"
+                        name="title" class="form-control mt-2" placeholder="Nome/Società" required>
                     </div>
                   </div>
-                </form>
-               
-              </div>
-        
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input type="file" id="image" name="image" placeholder="ED" required>
+                      <label for="image"><a href="{{intervention_record.image}}">IMAGE LINK</a></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input type="file" id="image" name="image" placeholder="ED" required>
+                      <label for="image"><a href="{{intervention_record.image}}">IMAGE LINK</a></label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-group" id="exampleFormControlTextarea1">
+                      <textarea type="text" id="description" [(ngModel)]="intervention_record.description"
+                        name="description" class="form-control mt-2" placeholder="Description...." rows="3"
+                        required></textarea>
+                    </div>
+                  </div>
+
+
+
+                  <div class="col-12">
+                    <button class="btn btn-light" type="submit" (click)="updaterecord()">Update</button>
+                  </div>
+                </div>
+              </form>
+
             </div>
+
+          </div>
         </div>
-        </div>
-        
-        
-        
+      </div>
+
+
+
     </div>
   </div>
 </div>
 <!-- ********************video modal000 -->
-<div class="modal fade " id="videomodal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade " id="videomodal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-     <video width="100%" height="100%"src="{{intervention_record.videos}}" controls ></video>   
+      <video width="100%" height="100%" src="{{intervention_record.videos}}" controls></video>
     </div>
   </div>
 </div>
+<!-- ********************************8EDIT MODUL END************************* -->
