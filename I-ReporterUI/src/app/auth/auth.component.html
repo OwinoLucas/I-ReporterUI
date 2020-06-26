@@ -5,7 +5,7 @@
         <form *ngIf="!displayAccountSuccessfullyCreatedSection; else signupSuccessMessage;" [formGroup]="newUserForm"
           role="form" (ngSubmit)="onSubmit(newUserForm)">
           <div class="form-group">
-            <h2>Create account</h2>
+            <legend>Create account</legend>
           </div>
           <div class="form-group">
             <label class="control-label" for="firstName">First name</label>
@@ -135,13 +135,13 @@
           <p class="form-group">By creating an account, you agree to our <a href="#">Terms of Use</a> and our <a
               href="#">Privacy Policy</a>.</p>
           <hr>
-          <p>Already have an account? <a href="#">Sign in</a></p>
+          <p>Already have an account? <a routerLink="/login">Sign in</a></p>
         </form>
 
         <ng-template #signupSuccessMessage>
           <p class="form-group">Your account has been successfully created.</p>
           <hr>
-          <p>Proceed to sign in? <a href="#">Sign in</a></p>
+          <p>Proceed to sign in? <a routerLink="/login">Sign in</a></p>
         </ng-template>
       </div>
     </div>

@@ -1,9 +1,14 @@
 ul {
   margin-left: 20px;
+  font-size: larger;
 }
 
 .spacer {
   flex: 1 1 auto;
+}
+
+li a:hover {
+  background-color: #88bef5;
 }
 
 /* :root {

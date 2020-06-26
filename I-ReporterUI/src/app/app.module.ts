@@ -9,13 +9,15 @@ import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { AuthComponent } from './auth/auth.component';
 import { SignupService } from './signup.service';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     HomeComponent,
-    AuthComponent
+    AuthComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

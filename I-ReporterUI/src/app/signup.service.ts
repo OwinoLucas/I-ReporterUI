@@ -12,7 +12,7 @@ export class SignupService {
 
 
   createNewUser(newUserDetails: {}): Observable<{}> {
-    let signupAPI: string = 'http://127.0.0.1:8000/signup/';
+    let signupAPI: string = 'http://127.0.0.1:8000/api/signup/';
     return this.httpclient.post(
       signupAPI,
       newUserDetails,
