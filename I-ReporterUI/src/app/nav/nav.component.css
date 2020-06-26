@@ -1,6 +1,7 @@
 ul {
-  margin-left: 20px;
+  margin-left: 0px;
   font-size: larger;
+  color: white;
 }
 
 .spacer {
@@ -8,7 +9,7 @@ ul {
 }
 
 li a:hover {
-  background-color: #88bef5;
+  background-color: #5d5d5a;
 }
 
 /* :root {
