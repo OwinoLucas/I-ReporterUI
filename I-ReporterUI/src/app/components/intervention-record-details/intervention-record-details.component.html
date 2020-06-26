@@ -32,15 +32,18 @@
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
   integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-<div class="container-fluid">
+<div class="" style="margin-left: 30%;width: 2000px;">
   <div class="row">
 
     <div class="col-md-4 mt-5" *ngIf="intervention_record">
       <div class="card text-center">
         <img class="card-img-top" src="{{intervention_record.image}}" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">{{intervention_record.id}}:{{intervention_record.title}}</h5>
+          <h5 class="card-title">{{intervention_record.title}}</h5>
           <hr>
+          <p>{{intervention_record.description}}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum metus elit, finibus et hendrerit sollicitudin, condimentum in ipsum. Ut vulputate interdum mi, nec mattis ipsum ornare in. Donec non efficitur arcu. Mauris ex massa, facilisis id tincidunt non, mollis at nisl. Cras in risus sit amet arcu interdum molestie. Fusce sem nulla, pulvinar ut pulvinar porttitor, vulputate eleifend lectus. Vestibulum fringilla, mi sit amet convallis malesuada, nibh augue ullamcorper sapien, vitae lobortis dui dolor ut nisi. Nullam euismod ligula eget maximus convallis. Sed ligula ipsum, vulputate vitae porta sed, finibus sit amet dolor. Nam cursus, dui eget finibus fermentum, erat elit euismod turpis, a luctus enim enim et est. Etiam eget scelerisque odio. Ut a justo et odio rhoncus gravida. Nullam finibus tempus leo, auctor pharetra elit pretium nec. Ut mauris velit, convallis sit amet lacinia feugiat, fringilla ornare nisi. Morbi nisl turpis, pretium a justo eu, consectetur maximus ligula.
+
+             </p>
           <p>
             <a class="btn btn-primary" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"
               role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -88,14 +91,7 @@
   </div>
 
   <br>
-  <!-- <div class="row text-center bg-success text-white" id="author">
-  <div class="col-12 mt-4 h3 ">
-  <a href="#">by P. Fattoruso</a>
-</div>
-<div class="col-12 my-2">
-<a href="https://www.linkedin.com/in/paolofattoruso/" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
-</div>
-</div> -->
+
 </div>
 
 <!-- ****************************** modal class -->

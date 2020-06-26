@@ -39,7 +39,6 @@ export class InterventionRecordDetailsComponent implements OnInit {
       }
       else{
         alert('nothing done')
-        this.router
       }
     }
     updaterecord(){
