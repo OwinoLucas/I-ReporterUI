@@ -9,40 +9,48 @@ import { ProfileService} from 'src/app/services/profile.service';
 })
 export class ProfileComponent implements OnInit {
 
-  profile = {
-    profile_picture:'',
-    bio:'',
-    contacts:''
-  };
+  imageUrl :string ='/assets/user-512.png'
+  
+  
+  profile_picture:File;
+  bio:'';
+  contacts:'';
+  displayname:'';
+  
+
+
   submitted = false;
+  onImageChanged(event:any){
+    this.profile_picture=event.target.files[0]
+  }
 
   constructor(private profileService: ProfileService) { }
 
   ngOnInit() {
   }
+  handleFileInput(file : FileList){
+    this.profile_picture=file.item(0);
+    var reader = new FileReader();
+    reader.onload=(event:any) => {
+      this.imageUrl=event.target.result;
+    }
+    reader.readAsDataURL(this.profile_picture);
+    
+  }
 
   saveProfile(){
-    const data={
-      profile_picture: this.profile.profile_picture,
-      bio: this.profile.bio,
-      contacts: this.profile.contacts
-    };
+    const upload=new FormData();
+     upload.append('profile_picture',this.profile_picture,this.profile_picture.name);
+     upload.append('bio',this.bio);
+     upload.append('contacts',this.contacts);
+     upload.append('displayname',this.displayname);
     
-    this.profileService.create(data).subscribe(response => {
+    this.profileService.create(upload).subscribe(response => {
       console.log(response);
       this.submitted = true;
       },
     error => {
       console.log(error)
     })
-  }
-
-  newProfile(){
-    this.submitted=false;
-    this.profile={
-      profile_picture:'',
-      bio:'',
-      contacts:''
-    };
   }
 }

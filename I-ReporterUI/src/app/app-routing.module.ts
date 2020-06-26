@@ -5,9 +5,8 @@ import { CurrentprofileComponent} from './components/currentprofile/currentprofi
 
 
 const routes: Routes = [
-  {path: "profile", component: CurrentprofileComponent},
+  {path: "profile/:id", component: CurrentprofileComponent},
   {path: "create/profile", component:ProfileComponent},
-  {path: "", component: ProfileComponent},
 ];
 
 @NgModule({
