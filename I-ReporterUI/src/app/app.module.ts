@@ -13,12 +13,26 @@ import { InterventionRecordDetailsComponent } from './components/intervention-re
 import{CommonModule }from '@angular/common';
 import{BrowserAnimationsModule }from '@angular/platform-browser/animations';
 import {ToastrModule} from 'ngx-toastr'
+import {  ReactiveFormsModule } from '@angular/forms';
+
+
+
+
+import { LoginComponent } from './components/login/login.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { NavComponent } from './nav/nav.component';
+import { HomeComponent } from './home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
     AddInterventionRecordComponent,
     InterventionRecordListComponent,
-    InterventionRecordDetailsComponent
+    InterventionRecordDetailsComponent,
+    AppComponent,
+    LoginComponent,
+    NavbarComponent,
+    NavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +45,16 @@ import {ToastrModule} from 'ngx-toastr'
     ToastrModule.forRoot(),
     AgmCoreModule.forRoot({
       // apiKey:'AIzaSyAU4NQxFttNiM906LqaPSb3xrjOyzhvE9E'
+    }),
+    ReactiveFormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 5000,
+      positionClass: 'toast-top-center',
+      preventDuplicates: true,
     })
+
   ],
   providers: [],
   bootstrap: [AppComponent]
