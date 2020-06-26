@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+  <title>Profile</title>
+</head>
+<body>
+  <div class="container">
+    <div class="">
+    <h1 class="text-center">User Profile</h1>
+    </div>
+    <ng-progress></ng-progress>
+    <div class="row">
+      <div class="col-md-5">
+        <div class="">
+        <img src="{{currentProfile.profile_picture}}" class="" alt="profile-picture" height="400px" width="400px">
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="card" id="info">
+          <h4>{{currentProfile.displayname}}</h4>
+          <h5>{{currentProfile.bio}}</h5>
+          <h5>Contacts: {{currentProfile.contacts}}</h5>
+          <br>
+          <br>
+        </div>  
+        <div *ngIf="show" class="card" id="card">
+      <div class="edit-form">
+        <h2 class="text-center">Edit Your Profile</h2>
+        <div class="form-group">
+          <label for="displayname"></label>
+          <input type="text" class="form-control" id="displayname" required [(ngModel)]="displayname" name='displayname' placeholder="Display Name"/>
+        </div>
+        <div class="form-group">
+          <label for="bio"></label>
+          <input type="text" class="form-control" id="bio" required [(ngModel)]="bio" name="bio" placeholder="bio"/>
+        </div>
+        <div class="form-group">
+          <label for="contacts"></label>
+          <input type="text" class="form-control" id="contacts" required [(ngModel)]="contacts" name="contacts" placeholder="contacts"/>
+        </div>
+        <img [src]="imageUrl" style="width:120px;height:120px;">
+        <div class="form-group">
+          <label for="Profile Picture">Profile Picture</label>
+          <input type="file" class="form-control" id="profile_picture" required [(ngModel)]="profile_picture" name="profile_picture"  (change)="handleFileInput($event.target.files)" placeholder="profile picture"/>
+        </div>
+        <div class="update">
+        <a routerLink="/profile/{{currentProfile.id}}"><button type="submit" class="btn btn-success" (click)="updateProfile()" id="refresh">Update</button></a>
+        <button class="btn btn-danger" (click)="hideForm()" id="hide">Cancel</button>
+        </div>
+      </div> 
+    </div>
+     
+        
+      </div>
+
+      <div class="col-md-2">
+        <br>
+        <br>
+        <br>
+        <button class="btn btn-primary" (click)="showForm()">Edit Profile</button>
+      </div>
+    </div>
+    <br>
+    <br>
+    
+    
+    
+    
+  </div>
+
+</body>
