@@ -50,7 +50,7 @@
                 <span *ngIf="newUserForm.controls['lastName'].hasError('maxlength')">Last name is too long.</span>
               </div>
             </div>
-          </div>
+          </div> 
           <div class="form-group">
             <label class="control-label" for="signupEmail">Email</label>
             <input id="signupEmail" type="email" class="form-control" formControlName="email">
@@ -59,7 +59,7 @@
                                             newUserForm.controls['email'].hasError('nullvalidator') ||
                                             newUserForm.controls['email'].hasError('email')
                                           ) &&
-                                          newUserForm.controls['email'].touched">
+                                          (newUserForm.controls['email'].touched || submitted || invalidEmailAddress)">
               <div>
                 <span><svg aria-hidden="true" fill="currentColor" focusable="false" width="16px" height="16px"
                     viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
@@ -71,8 +71,8 @@
                   *ngIf="newUserForm.controls['email'].hasError('required') || newUserForm.controls['email'].hasError('nullvalidator')">Email
                   is required.</span>
 
-                <span *ngIf="newUserForm.controls['email'].hasError('email')">Kindly provide a valid email <address>
-                  </address>.</span>
+                <span *ngIf="newUserForm.controls['email'].hasError('email')">Kindly provide a valid email.</span>
+                <span *ngIf="invalidEmailAddress"> {{invalidEmailAddressMessage}} </span>
               </div>
             </div>
 
