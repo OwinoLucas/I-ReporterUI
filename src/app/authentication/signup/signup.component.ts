@@ -17,6 +17,8 @@ export class SignupComponent implements OnInit {
   newUserForm: FormGroup;
   submitted = false;
   displayAccountSuccessfullyCreatedSection: boolean = false;
+  invalidEmailAddress: boolean = false;
+  invalidEmailAddressMessage: string;
   
   constructor(
     private formBuilder: FormBuilder,
@@ -49,6 +51,8 @@ export class SignupComponent implements OnInit {
   }
   onSubmit(signUpForm: FormGroup){
     this.displayAccountSuccessfullyCreatedSection = false;
+    this.invalidEmailAddress = false;
+    this.invalidEmailAddressMessage = null;
     this.submitted = true;
     if (signUpForm.invalid) {
       return;
@@ -66,8 +70,21 @@ export class SignupComponent implements OnInit {
             this.displayAccountSuccessfullyCreatedSection = true;
             break;
         }
+        console.log(data)
       },
-      (err)=> {},
+      (err)=> {
+        switch(err['status']) {
+          case 400:
+            console.log(err['error'].hasOwnProperty('email'))
+            if (err['error'].hasOwnProperty('email')) {
+              this.invalidEmailAddress = true;
+              this.invalidEmailAddressMessage = err['error'][0];
+            }
+            break;
+        }
+        console.log(err);
+        // if (err.){}
+      },
     )
   }
 
