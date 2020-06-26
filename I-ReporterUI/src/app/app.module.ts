@@ -10,6 +10,9 @@ import { AddInterventionRecordComponent } from './components/add-intervention-re
 import { AgmCoreModule} from '@agm/core';
 import { InterventionRecordListComponent } from './components/intervention-record-list/intervention-record-list.component';
 import { InterventionRecordDetailsComponent } from './components/intervention-record-details/intervention-record-details.component';
+import{CommonModule }from '@angular/common';
+import{BrowserAnimationsModule }from '@angular/platform-browser/animations';
+import {ToastrModule} from 'ngx-toastr'
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +26,9 @@ import { InterventionRecordDetailsComponent } from './components/intervention-re
     FormsModule,
     HttpClientModule,
     GoogleMapsModule,
+    CommonModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     AgmCoreModule.forRoot({
       // apiKey:'AIzaSyAU4NQxFttNiM906LqaPSb3xrjOyzhvE9E'
     })

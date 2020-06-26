@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { InterventionRecordService} from 'src/app/services/interventionrecord.service';
 import {ActivatedRoute,Route, Router} from '@angular/router';
+import {ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: 'app-intervention-record-details',
@@ -12,7 +13,8 @@ export class InterventionRecordDetailsComponent implements OnInit {
   constructor(
     private interventionrecordservice:InterventionRecordService,
     private route:ActivatedRoute,
-    private router:Router
+    private router:Router,
+    private toastr:ToastrService
     ) { }
 
   ngOnInit(): void {
@@ -33,9 +35,11 @@ export class InterventionRecordDetailsComponent implements OnInit {
       var r=confirm('Are you sure to delete?');
       if (r ==true){
         this.deleteIntervention()
+        this.toastr.success('Deleted successfully!','Deleted successfully!')
       }
       else{
         alert('nothing done')
+        this.router
       }
     }
     updaterecord(){
@@ -55,7 +59,7 @@ export class InterventionRecordDetailsComponent implements OnInit {
       .subscribe(
         data=>{
           console.log(data);
-          this.router.navigate(['intervention-record/all']);
+          this.router.navigate(['/intervention-record/all']);
         },
         error=>{
           console.log(error)
