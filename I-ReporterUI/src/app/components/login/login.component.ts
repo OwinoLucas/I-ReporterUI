@@ -2,6 +2,7 @@ import { LoginService } from './../../services/login.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   formGroup: FormGroup;
 
-  constructor(private loginService: LoginService, private toastr: ToastrService) { }
+  constructor(private loginService: LoginService, private toastr: ToastrService, private route: ActivatedRoute, private router: Router) { }
 
   showSuccess() {
     this.toastr.success('Login Successful', 'Login');
@@ -40,7 +41,7 @@ export class LoginComponent implements OnInit {
           console.log(result);
           // alert(result.msg);
           this.showSuccess();
-
+          this.router.navigate(["/"])
         }else {
           alert(result.msg);
         }},
