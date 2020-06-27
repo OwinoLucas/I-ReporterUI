@@ -86,7 +86,7 @@ export class InterventionRecordDetailsComponent implements OnInit {
       if(this.editvideos){
         uploadData.append('videos',this.editvideos,this.editvideos.name)
       }
-      if(this.editlatitude & this.editlongitude){
+      if(this.editlatitude && this.editlongitude){
         uploadData.append('latitude',this.editlatitude.toString())
         uploadData.append('longitude',this.editlongitude.toString())
       }
