@@ -15,8 +15,8 @@ export class InterventionRecordDetailsComponent implements OnInit {
   editdescription:'';
   editimage:File;
   editvideos:File;
-  editlatitude:'';
-  editlongitude:'';
+  editlatitude:number;
+  editlongitude:number;
   submitted=false;
   constructor(
     private interventionrecordservice:InterventionRecordService,
@@ -28,10 +28,21 @@ export class InterventionRecordDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.getIntervention(this.route.snapshot.paramMap.get('id'));
   }
+  locationmark=true;;
+  onChoseLocation(event){
+    this.editlatitude=event.coords.lat;
+    this.editlongitude=event.coords.lng;
+    this.locationmark=true;
+    
+    console.log (this.editlongitude,this.editlongitude)
+  }
     getIntervention(id){
       this.interventionrecordservice.get(id)
       .subscribe(
         data=>{
+          this.editlatitude=parseInt( data['latitude'])
+          this.editlongitude=parseInt( data['longitude'])
+          console.log(this.editlongitude)
           this.intervention_record=data;
           console.log(data);
         },
@@ -74,6 +85,10 @@ export class InterventionRecordDetailsComponent implements OnInit {
       // uploadData.append('status',this.status)
       if(this.editvideos){
         uploadData.append('videos',this.editvideos,this.editvideos.name)
+      }
+      if(this.editlatitude & this.editlongitude){
+        uploadData.append('latitude',this.editlatitude.toString())
+        uploadData.append('longitude',this.editlongitude.toString())
       }
       console.log(uploadData)
       // const data= new FormData()
