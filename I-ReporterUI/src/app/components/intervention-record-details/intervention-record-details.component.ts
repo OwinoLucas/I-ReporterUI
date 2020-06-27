@@ -46,8 +46,18 @@ export class InterventionRecordDetailsComponent implements OnInit {
         this.toastr.success('Deleted successfully!','Deleted successfully!')
       }
       else{
-        alert('nothing done')
+        alert('nothing done');
       }
+    }
+    showSuccess() {
+      this.toastr.success('Nothing deleted', 'Nothing deleted');
+    }
+  
+    onIMageChanged(event:any){
+      this.editimage=event.target.files[0];
+    }
+    onVideoChanged(event:any){
+      this.editvideos=event.target.files[0];
     }
     
     updaterecord(){
@@ -82,6 +92,8 @@ export class InterventionRecordDetailsComponent implements OnInit {
         data=>{
           console.log(data)
           alert('Editted succesfully!')
+           
+
         },
         error=>{
           console.log(error.error)
