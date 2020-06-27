@@ -4,7 +4,6 @@ import { } from '@angular/core'
 import { DecimalPipe } from '@angular/common';
 import { NONE_TYPE } from '@angular/compiler';
 
-declare let L;
 @Component({
   selector: 'app-add-intervention-record',
   templateUrl: './add-intervention-record.component.html',
@@ -18,8 +17,11 @@ export class AddInterventionRecordComponent implements OnInit {
   status:"rejected";
   image:File;
   videos:File;
-  latitude: -1.045620;
-  longitude: 37.075142 ;
+  latitude:any ;
+  longitude:any ;
+
+  
+  
   onIMageChanged(event:any){
     this.image=event.target.files[0];
   }
@@ -37,7 +39,14 @@ export class AddInterventionRecordComponent implements OnInit {
   
   submitted=false;
 
-  constructor(private interventionrecordService:InterventionRecordService) { }
+  constructor(private interventionrecordService:InterventionRecordService) { 
+    if (navigator)
+    {
+      navigator.geolocation.getCurrentPosition(pos =>{
+        this.longitude= +pos.coords.longitude;
+        this.latitude = +pos.coords.latitude
+      });
+    }}
 
   ngOnInit(): void {
 

@@ -44,7 +44,7 @@ import { HomeComponent } from './home/home.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     AgmCoreModule.forRoot({
-      // apiKey:'AIzaSyAU4NQxFttNiM906LqaPSb3xrjOyzhvE9E'
+      apiKey:'AIzaSyAU4NQxFttNiM906LqaPSb3xrjOyzhvE9E'
     }),
     ReactiveFormsModule,
     HttpClientModule,
