@@ -23,6 +23,6 @@ export class InterventionRecordService {
     return this.http.delete(`${baseUrl}intervention-record-detail/${id}`)
   }
   putrecord(id,data){
-    return this.http.put(`${baseUrl}intervention-record-detail/${id}`,data)
+    return this.http.put(`${baseUrl}intervention-record-detail/${id}/`,data)
   }
 }

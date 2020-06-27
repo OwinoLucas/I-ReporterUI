@@ -2,6 +2,7 @@ import { Component, OnInit ,AfterViewInit} from '@angular/core';
 import {InterventionRecordService } from 'src/app/services/interventionrecord.service'
 import { } from '@angular/core'
 import { DecimalPipe } from '@angular/common';
+import { NONE_TYPE } from '@angular/compiler';
 
 declare let L;
 @Component({
