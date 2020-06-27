@@ -1,4 +1,4 @@
-<div class="container-fluid" *ngIf="!submitted">
+<div class="container-fluid bgcol" *ngIf="!submitted">
   <div class="row no-gutter">
     <!-- The image half -->
 
@@ -17,12 +17,11 @@
               <div class="form-group mb-3">
                 <label for="title">Title</label>
 
-                <input type="text" class="form-control rounded-pill border-0 shadow-sm px-4" id="title" required
-                  [(ngModel)]="title" name="title" />
+                <input type="text" class="form-control rounded-pill border-0 shadow-lg p-3 mb-5 px-4" id="title" required [(ngModel)]="title" name="title" />
               </div>
               <div class="form-group mb-3">
                 <label for="description">Description</label>
-                <textarea class="form-control rounded-pill border-0 shadow-sm px-4" id="description" required
+                <textarea class="form-control rounded-pill border-0 shadow-lg p-3 mb-5 px-4" id="description" required
                   [(ngModel)]="description" name="description">     </textarea> </div>
               <div class="custom-control custom-checkbox mb-3">
                 

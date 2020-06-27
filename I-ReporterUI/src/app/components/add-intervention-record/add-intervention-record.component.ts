@@ -3,6 +3,7 @@ import {InterventionRecordService } from 'src/app/services/interventionrecord.se
 import { } from '@angular/core'
 import { DecimalPipe } from '@angular/common';
 import { NONE_TYPE } from '@angular/compiler';
+import{ActivatedRoute,Router }from '@angular/router'
 
 @Component({
   selector: 'app-add-intervention-record',
@@ -14,13 +15,13 @@ export class AddInterventionRecordComponent implements OnInit {
   
   title:'';
   description:'';
-  status:"rejected";
+
   image:File;
   videos:File;
   latitude:any ;
   longitude:any ;
 
-  
+  status=null;
   
   onIMageChanged(event:any){
     this.image=event.target.files[0];
@@ -39,7 +40,10 @@ export class AddInterventionRecordComponent implements OnInit {
   
   submitted=false;
 
-  constructor(private interventionrecordService:InterventionRecordService) { 
+  constructor(
+    private interventionrecordService:InterventionRecordService,
+    private router:Router,
+    ) { 
     if (navigator)
     {
       navigator.geolocation.getCurrentPosition(pos =>{
@@ -78,7 +82,9 @@ export class AddInterventionRecordComponent implements OnInit {
     .subscribe(
       response => {
         console.log(response);
+        this.router.navigate(['/intervention-record/all'])
         this.submitted = true;
+
       },
       error => {
         console.log(error);
