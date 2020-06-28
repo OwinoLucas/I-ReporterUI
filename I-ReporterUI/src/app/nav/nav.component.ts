@@ -15,11 +15,14 @@ export class NavComponent implements OnInit {
     private router:Router
     ) { }
   title:''
+  interventionrecords:any;
   searchinterventionrecord(){
     this.interventionrecordservice.getbytitle(this.title)
     .subscribe(
-      data=>{
-        this.router.navigate([`search-list/${this.title}`])
+      data=>{  
+        this.router.navigate([`search-list/${this.title}`],{state:{data:{ data}}})
+        this.interventionrecords=data
+        const datasearch=data
         console.log(data)
       },
       error=>{

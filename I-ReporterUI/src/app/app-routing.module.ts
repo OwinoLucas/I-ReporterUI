@@ -5,6 +5,7 @@ import { AddInterventionRecordComponent} from './components/add-intervention-rec
 import {InterventionRecordListComponent } from './components/intervention-record-list/intervention-record-list.component'
 import {InterventionRecordDetailsComponent }from './components/intervention-record-details/intervention-record-details.component'
 import {SearchListComponent} from './components/search-list/search-list.component'
+import {NavComponent} from '../app/nav/nav.component'
 const routes: Routes = [
   {path:'add/new-intervention-record',component:AddInterventionRecordComponent},
   {path:'intervention-record/all',component:InterventionRecordListComponent},

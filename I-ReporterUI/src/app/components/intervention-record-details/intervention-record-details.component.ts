@@ -51,7 +51,7 @@ export class InterventionRecordDetailsComponent implements OnInit {
           console.log(error);
         });
     }
-    nullstatus=false
+    nullstatus=true
     upstatus:''
     status:any;
     investigation:any;
@@ -67,16 +67,17 @@ export class InterventionRecordDetailsComponent implements OnInit {
           
          console.log(status)
          if (status=='waiting'){
-           this.nullstatus=true;
-         }else{
-           this.nullstatus=false;
+           
          }if (this.status=="Under Investigation"){
            this.investigation=this.status
+           this.nullstatus=false;
+           console.log(this.investigation)
          }else if(this.status=="rejected"){
            this.rejected=this.status
+           this.nullstatus=false;
          }else if (this.status=="resolved"){
            this.resolved=this.status
-        
+           this.nullstatus=false;
          }else if(this.status=="waiting"){
            this.stat=this.status
          }
