@@ -25,4 +25,7 @@ export class InterventionRecordService {
   putrecord(id,data){
     return this.http.put(`${baseUrl}intervention-record-detail/${id}/`,data)
   }
+  getbytitle(title){
+    return this.http.get(`${baseUrl}intervention-records/${title}`);
+  }
 }
