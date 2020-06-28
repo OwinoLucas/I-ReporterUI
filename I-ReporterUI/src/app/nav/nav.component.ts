@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { InterventionRecordService} from 'src/app/services/interventionrecord.service'
 import { InterventionRecordListComponent } from '../components/intervention-record-list/intervention-record-list.component';
 import { error } from '@angular/compiler/src/util';
+import {Router} from '@angular/router'
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
@@ -9,12 +10,16 @@ import { error } from '@angular/compiler/src/util';
 })
 export class NavComponent implements OnInit {
 
-  constructor(private interventionrecordservice:InterventionRecordService) { }
+  constructor(
+    private interventionrecordservice:InterventionRecordService,
+    private router:Router
+    ) { }
   title:''
   searchinterventionrecord(){
     this.interventionrecordservice.getbytitle(this.title)
     .subscribe(
       data=>{
+        this.router.navigate([`search-list/${this.title}`])
         console.log(data)
       },
       error=>{

@@ -4,12 +4,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { AddInterventionRecordComponent} from './components/add-intervention-record/add-intervention-record.component';
 import {InterventionRecordListComponent } from './components/intervention-record-list/intervention-record-list.component'
 import {InterventionRecordDetailsComponent }from './components/intervention-record-details/intervention-record-details.component'
+import {SearchListComponent} from './components/search-list/search-list.component'
 const routes: Routes = [
   {path:'add/new-intervention-record',component:AddInterventionRecordComponent},
   {path:'intervention-record/all',component:InterventionRecordListComponent},
   {path:'intervention-record/:id',component:InterventionRecordDetailsComponent},
   {path: 'login', component: LoginComponent},
   {path: '', redirectTo:"/", pathMatch:"full"},
+  {path:'search-list/:title',component:SearchListComponent}
 ];
 
 @NgModule({
