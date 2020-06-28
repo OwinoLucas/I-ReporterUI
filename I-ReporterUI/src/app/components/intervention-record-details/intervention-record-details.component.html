@@ -36,15 +36,21 @@
         </div>
         <div class="card-footer text-muted">
           <div class="row">
-            <div class="col">
-              <p style="color:green;"><i class="fas fa-check"></i> <span> RESOLVED</span> </p>
+            <div class="col" [ngSwitch]="intervention_record.status">
+              
+              <p style="color:rgb(172, 172, 30);" *ngIf="investigation"><i class="fas fa-exclamation"></i> <span> {{intervention_record.status}}</span> </p>
+              <p style="color:rgb(228, 44, 54);" *ngIf="rejected"><i class="fas fa-ban"></i> <span> {{intervention_record.status}}</span> </p>
+              <p style="color:green;" *ngIf="resolved"><i class="fas fa-check"></i> <span> {{intervention_record.status}}</span> </p>
+              <p style="color:rgb(168, 86, 216);" *ngIf="stat" title="Awaiting admins/relevant party approval"><i class="fas fa-eye-slash"></i> <span> Waiting...</span> </p>
             </div>
             <div class="col">
-              <!-- <a href="mailto:test@test.com"><i class="fas fa-envelope"></i></a> -->
 
-              <a style="color:blue;" href="" data-toggle="modal" data-target="#bd-example-modal-lg">
+              <a style="color:blue;" href="" data-toggle="modal" data-target="#bd-example-modal-lg" *ngIf="nullstatus">
                 <i class="fa fa-cog" aria-hidden="true"></i> Edit</a>
-              <!-- <button type="button" class="btn btn-primary" >Large modal</button> -->
+                <a style="color:blue;" class="text-muted"   *ngIf="!nullstatus" title="This is because the status is either underreview,underinvestigation or resolved.">
+                  <i class="far fa-times-circle" aria-hidden="true"></i> <SPAN >NOT-EDITABLE</SPAN> </a>
+                  
+
             </div>
             <div class="col">
 

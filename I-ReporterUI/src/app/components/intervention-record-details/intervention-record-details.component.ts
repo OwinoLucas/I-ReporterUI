@@ -27,6 +27,7 @@ export class InterventionRecordDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getIntervention(this.route.snapshot.paramMap.get('id'));
+    this.get_status(this.route.snapshot.paramMap.get('id'))
   }
   locationmark=true;;
   onChoseLocation(event){
@@ -50,6 +51,41 @@ export class InterventionRecordDetailsComponent implements OnInit {
           console.log(error);
         });
     }
+    nullstatus=false
+    upstatus:''
+    status:any;
+    investigation:any;
+    resolved:any;
+    rejected:any;
+    stat:any;
+
+    get_status(id){
+      this.interventionrecordservice.get(id)
+      .subscribe(
+        data=>{
+         this.status=data['status']
+          
+         console.log(status)
+         if (status=='waiting'){
+           this.nullstatus=true;
+         }else{
+           this.nullstatus=false;
+         }if (this.status=="Under Investigation"){
+           this.investigation=this.status
+         }else if(this.status=="rejected"){
+           this.rejected=this.status
+         }else if (this.status=="resolved"){
+           this.resolved=this.status
+        
+         }else if(this.status=="waiting"){
+           this.stat=this.status
+         }
+        }
+      )
+    }
+
+
+
     confirmdelete(event){
       var r=confirm('Are you sure to delete?');
       if (r ==true){
