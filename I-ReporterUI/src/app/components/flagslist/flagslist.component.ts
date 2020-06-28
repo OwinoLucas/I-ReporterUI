@@ -7,8 +7,9 @@ import { FlagapiService } from 'src/app/services/flagapi.service';
   styleUrls: ['./flagslist.component.css']
 })
 export class FlagslistComponent implements OnInit {
-/*
+
   flags:any;
+  /*
   title="";
   description='';
   tags="";
@@ -21,7 +22,7 @@ export class FlagslistComponent implements OnInit {
       this.flagapiservice.getAll()
         .subscribe(
           data => {
-            this.flag = data;
+            this.flags = data;
             console.log(data);
           },
           error => {

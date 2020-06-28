@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-const baseUrl='http://127.0.0.1:8000/api/flags';
+const baseUrl='http://127.0.0.1:8000/api/';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,7 @@ export class FlagapiService {
     return this.http.post(`${baseUrl}/create/`,data)
   }
   getAll(){
-    return this.http.get(`${baseUrl}/`)
+    return this.http.get(`${baseUrl}flags/`)
   }
   get(id){
     return this.http.get(`${baseUrl}/${id}`);

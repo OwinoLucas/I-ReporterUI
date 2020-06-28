@@ -6,9 +6,9 @@ import { FlagComponent} from './components/flag/flag.component';
 import {FlagslistComponent } from './components/flagslist/flagslist.component'
 import {FlagdetailComponent }from './components/flagdetail/flagdetail.component'
 const routes: Routes = [
-  {path:'add/new-intervention-record',component:FlagComponent},
-  {path:'intervention-record/all',component:FlagslistComponent},
-  {path:'intervention-record/:id',component:FlagdetailComponent},
+  {path:'add/new-flag',component:FlagComponent},
+  {path:'flags/all',component:FlagslistComponent},
+  {path:'flag/:id',component:FlagdetailComponent},
   {path: '', redirectTo:"/", pathMatch:"full"},
 ];
 
