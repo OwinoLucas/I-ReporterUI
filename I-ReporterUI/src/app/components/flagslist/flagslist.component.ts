@@ -7,12 +7,12 @@ import { FlagapiService } from 'src/app/services/flagapi.service';
   styleUrls: ['./flagslist.component.css']
 })
 export class FlagslistComponent implements OnInit {
-
+/*
   flags:any;
   title="";
   description='';
   tags="";
-
+*/
   constructor(private flagapiservice:FlagapiService) { }
 
   ngOnInit(): void { this.retrieveFlags();
@@ -21,7 +21,7 @@ export class FlagslistComponent implements OnInit {
       this.flagapiservice.getAll()
         .subscribe(
           data => {
-            this.flags = data;
+            this.flag = data;
             console.log(data);
           },
           error => {
