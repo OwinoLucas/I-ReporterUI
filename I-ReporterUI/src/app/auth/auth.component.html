@@ -1,0 +1,149 @@
+<div class="container">
+  <div class="row">
+    <div class="panel panel-primary">
+      <div class="panel-body">
+        <form *ngIf="!displayAccountSuccessfullyCreatedSection; else signupSuccessMessage;" [formGroup]="newUserForm"
+          role="form" (ngSubmit)="onSubmit(newUserForm)">
+          <div class="form-group">
+            <legend>Create account</legend>
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="firstName">First name</label>
+            <input id="firstName" type="text" class="form-control" formControlName="firstName">
+
+            <div class="invalidInput" *ngIf="(
+                                              newUserForm.controls['firstName'].hasError('required') || 
+                                              newUserForm.controls['firstName'].hasError('nullvalidator') ||
+                                              newUserForm.controls['firstName'].hasError('maxlength')
+                                            ) &&
+                                            newUserForm.controls['firstName'].touched">
+              <div>
+                <span><svg aria-hidden="true" fill="currentColor" focusable="false" width="16px" height="16px"
+                    viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+                    </path>
+                  </svg></span>
+                <span
+                  *ngIf="newUserForm.controls['firstName'].hasError('required') || newUserForm.controls['firstName'].hasError('nullvalidator')">First
+                  name is required.</span>
+
+                <span *ngIf="newUserForm.controls['firstName'].hasError('maxlength')">First name is too long.</span>
+              </div>
+            </div>
+
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="lastName">Last name</label>
+            <input id="lastName" type="text" class="form-control" formControlName="lastName">
+            <div class="invalidInput"
+              *ngIf="(newUserForm.controls['lastName'].hasError('maxlength')) && newUserForm.controls['lastName'].touched">
+              <div>
+                <span><svg aria-hidden="true" fill="currentColor" focusable="false" width="16px" height="16px"
+                    viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+                    </path>
+                  </svg></span>
+
+                <span *ngIf="newUserForm.controls['lastName'].hasError('maxlength')">Last name is too long.</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="signupEmail">Email</label>
+            <input id="signupEmail" type="email" class="form-control" formControlName="email">
+            <div class="invalidInput" *ngIf="(
+                                              newUserForm.controls['email'].hasError('required') || 
+                                              newUserForm.controls['email'].hasError('nullvalidator') ||
+                                              newUserForm.controls['email'].hasError('email')
+                                            ) &&
+                                            newUserForm.controls['email'].touched">
+              <div>
+                <span><svg aria-hidden="true" fill="currentColor" focusable="false" width="16px" height="16px"
+                    viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+                    </path>
+                  </svg></span>
+                <span
+                  *ngIf="newUserForm.controls['email'].hasError('required') || newUserForm.controls['email'].hasError('nullvalidator')">Email
+                  is required.</span>
+
+                <span *ngIf="newUserForm.controls['email'].hasError('email')">Kindly provide a valid email <address>
+                  </address>.</span>
+              </div>
+            </div>
+
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="signupPassword">Password</label>
+            <input id="signupPassword" type="password" class="form-control" placeholder="at least 6 characters"
+              formControlName="password">
+            <div class="invalidInput" *ngIf="(
+                                                newUserForm.controls['password'].hasError('required') || 
+                                                newUserForm.controls['password'].hasError('nullvalidator') ||
+                                                newUserForm.controls['password'].hasError('minlength')
+                                              ) &&
+                                              newUserForm.controls['password'].touched">
+              <div>
+                <span><svg aria-hidden="true" fill="currentColor" focusable="false" width="16px" height="16px"
+                    viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+                    </path>
+                  </svg></span>
+                <span
+                  *ngIf="newUserForm.controls['password'].hasError('required') || newUserForm.controls['password'].hasError('nullvalidator')">Password
+                  is required.</span>
+
+                <span *ngIf="newUserForm.controls['password'].hasError('minlength')">Password is too short.</span>
+              </div>
+            </div>
+
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="signupPasswordagain">Password again</label>
+            <input id="signupPasswordagain" type="password" class="form-control" formControlName="confirmPassword">
+            <div class="invalidInput" *ngIf="(
+                                              newUserForm.controls['confirmPassword'].hasError('required') || 
+                                              newUserForm.controls['confirmPassword'].hasError('nullvalidator') ||
+                                              newUserForm.controls['confirmPassword'].value != newUserForm.controls['password'].value
+                                            ) &&
+                                            newUserForm.controls['confirmPassword'].touched">
+              <div>
+                <span><svg aria-hidden="true" fill="currentColor" focusable="false" width="16px" height="16px"
+                    viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+                    </path>
+                  </svg></span>
+                <span
+                  *ngIf="newUserForm.controls['confirmPassword'].hasError('required') || newUserForm.controls['confirmPassword'].hasError('nullvalidator')">Enter
+                  the password again..</span>
+
+                <span
+                  *ngIf="newUserForm.controls['confirmPassword'].value != newUserForm.controls['password'].value">Password
+                  does't match.</span>
+              </div>
+            </div>
+
+          </div>
+          <div class="form-group">
+            <button id="signupSubmit" type="submit" class="btn btn-info btn-block">Create your account</button>
+          </div>
+          <p class="form-group">By creating an account, you agree to our <a href="#">Terms of Use</a> and our <a
+              href="#">Privacy Policy</a>.</p>
+          <hr>
+          <p>Already have an account? <a routerLink="/login">Sign in</a></p>
+        </form>
+
+        <ng-template #signupSuccessMessage>
+          <p class="form-group" style="font-size: larger;">Your account has been successfully created.</p>
+          <hr>
+          <p>Proceed to sign in? <a routerLink="/login">Sign in</a></p>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

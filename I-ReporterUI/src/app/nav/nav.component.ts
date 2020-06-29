@@ -24,6 +24,7 @@ export class NavComponent implements OnInit {
         console.log(data)
       },
       error=>{
+        this.router.navigate(['**'])
         console.log(error.error)
       }
     )

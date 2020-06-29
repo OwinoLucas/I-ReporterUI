@@ -1,5 +1,5 @@
 import { Component, OnInit ,Input,OnChanges} from '@angular/core';
-import { NavbarComponent} from '../navbar/navbar.component'
+
 import { InterventionRecordService} from 'src/app/services/interventionrecord.service'
 @Component({
   selector: 'app-search-list',
@@ -7,7 +7,7 @@ import { InterventionRecordService} from 'src/app/services/interventionrecord.se
   styleUrls: ['./search-list.component.css']
 })
 export class SearchListComponent implements OnInit {
- @Input() intervention:NavbarComponent;
+
   constructor(public interventionrecordservice:InterventionRecordService) { }
   searchdata=this.interventionrecordservice.searchdata
   
