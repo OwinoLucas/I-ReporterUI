@@ -1,8 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+
+
 import { GoogleMapsModule } from '@angular/google-maps'
+
+
+import { ProfileComponent } from './components/profile/profile.component';
+import { CurrentprofileComponent } from './components/currentprofile/currentprofile.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,7 +20,7 @@ import { InterventionRecordDetailsComponent } from './components/intervention-re
 import{CommonModule }from '@angular/common';
 import{BrowserAnimationsModule }from '@angular/platform-browser/animations';
 import {ToastrModule} from 'ngx-toastr'
-import {  ReactiveFormsModule } from '@angular/forms';
+
 
 
 
@@ -30,6 +37,9 @@ import { SearchListComponent } from './components/search-list/search-list.compon
     InterventionRecordListComponent,
     InterventionRecordDetailsComponent,
     AppComponent,
+    AppComponent,
+    ProfileComponent,
+    CurrentprofileComponent,
     LoginComponent,
     NavbarComponent,
     NavComponent,
@@ -56,7 +66,6 @@ import { SearchListComponent } from './components/search-list/search-list.compon
       positionClass: 'toast-top-center',
       preventDuplicates: true,
     })
-
   ],
   providers: [],
   bootstrap: [AppComponent]

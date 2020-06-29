@@ -6,10 +6,16 @@ import {InterventionRecordListComponent } from './components/intervention-record
 import {InterventionRecordDetailsComponent }from './components/intervention-record-details/intervention-record-details.component'
 import {SearchListComponent} from './components/search-list/search-list.component'
 import {NavComponent} from '../app/nav/nav.component'
+import { ProfileComponent } from './components/profile/profile.component';
+import { CurrentprofileComponent} from './components/currentprofile/currentprofile.component';
+
 const routes: Routes = [
   {path:'add/new-intervention-record',component:AddInterventionRecordComponent},
   {path:'intervention-record/all',component:InterventionRecordListComponent},
   {path:'intervention-record/:id',component:InterventionRecordDetailsComponent},
+
+  {path: "profile/:id", component: CurrentprofileComponent},
+  {path: "create/profile", component:ProfileComponent}, 
   {path: 'login', component: LoginComponent},
   {path: '', redirectTo:"/", pathMatch:"full"},
   {path:'search-list/:title',component:SearchListComponent}

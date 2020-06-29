@@ -86,7 +86,7 @@ export class AddInterventionRecordComponent implements OnInit {
 
       },
       error => {
-        console.log(error);
+        console.log(error.error);
       });
 
   }

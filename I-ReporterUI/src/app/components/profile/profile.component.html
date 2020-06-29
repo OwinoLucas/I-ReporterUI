@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<body>
+  <div class="container">
+  
+    <h1 class="text-center">Create Your Profile</h1>
+    <div class="card">
+      <div class="submit-form">
+        <div *ngIf="!submitted">
+          <div class="form-group">
+            <label for="displayname"></label>
+            <input type="text" class="form-control" id="displayname"  [(ngModel)]="displayname" name='displayname' placeholder="Display Name" required/>
+          </div>
+          <div class="form-group">
+            <label for="bio"></label>
+            <input type="text" class="form-control" id="bio"  [(ngModel)]="bio" name='bio' placeholder="bio" required/>
+          </div>
+          <div class="form-group">
+            <label for="contacts"></label>
+            <input type="text" class="form-control" id="contacts" [(ngModel)]="contacts" name='contacts' placeholder="contacts" required/>
+          </div><img [src]="imageUrl" style="width:120px;height:120px;"
+          >
+          <div class="form-group">
+            <label for="Profile Picture">Profile Picture</label>
+            <input type="file"  id="profile_picture" class="form-control"  [(ngModel)]="profile_picture" name='profile_picture'  (change)="handleFileInput($event.target.files)" required/>
+          </div>
+        </div>
+        <div class="update">
+        <button (click)="saveProfile()" class="btn btn-success">Submit</button>
+        </div>
+        <div *ngIf="submitted">
+          <h4>You have submitted successfully</h4>
+        </div>
+      </div>
+    </div>  
+  </div> 
+</body>
