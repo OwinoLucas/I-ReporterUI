@@ -24,13 +24,9 @@
               "src/assets"
             ],
             "styles": [
-            
+
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/ngx-toastr/toastr.css",
-<<<<<<< HEAD
-=======
-
->>>>>>> 989ca6fc7365d3253f145ff552f04ea278c04e40
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
@@ -133,8 +129,5 @@
   "cli": {
     "analytics": false
   }
-<<<<<<< HEAD
-=======
- 
->>>>>>> 989ca6fc7365d3253f145ff552f04ea278c04e40
+
 }
