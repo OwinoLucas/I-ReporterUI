@@ -144,7 +144,7 @@ export class InterventionRecordDetailsComponent implements OnInit {
         data=>{
           console.log(data)
           alert('Editted succesfully!')
-           
+          this.getIntervention(this.route.snapshot.paramMap.get('id'));
 
         },
         error=>{
@@ -157,7 +157,7 @@ export class InterventionRecordDetailsComponent implements OnInit {
       .subscribe(
         data=>{
           console.log(data);
-          this.router.navigate(['/intervention-record/all']);
+          this.router.navigate(['intervention-record/all']);
         },
         error=>{
           console.log(error)
