@@ -71,7 +71,7 @@ export class AddInterventionRecordComponent implements OnInit {
     if(this.videos){
       uploadData.append('videos',this.videos,this.videos.name)
     }
-    if(this.latitude & this.longitude){
+    if(this.latitude && this.longitude){
       uploadData.append('latitude',this.latitude.toString())
       uploadData.append('longitude',this.longitude.toString())
     }
