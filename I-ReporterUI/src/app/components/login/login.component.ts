@@ -12,7 +12,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   formGroup: FormGroup;
-
+  dat: any;
   constructor(private loginService: LoginService, private toastr: ToastrService, private route: ActivatedRoute, private router: Router) { }
 
   showSuccess() {
@@ -25,6 +25,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.initForm();
+    
+    
   }
 
   initForm() {
@@ -38,10 +40,12 @@ export class LoginComponent implements OnInit {
     if (this.formGroup.valid) {
       this.loginService.login(this.formGroup.value).subscribe(result => {
         if (result.success) {
-          console.log(result);
+          
           // alert(result.msg);
           this.showSuccess();
-          this.router.navigate(["home"])
+          this.router.navigate(["home"]) 
+          
+
         } else {
           alert(result.msg);
         }
@@ -58,7 +62,7 @@ export class LoginComponent implements OnInit {
   get email() {
     return this.formGroup.get('email');
   }
-
+ 
   get password() {
     return this.formGroup.get('password');
   }

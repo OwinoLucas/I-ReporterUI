@@ -8,6 +8,7 @@ describe('LoginService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({});
     service = TestBed.inject(LoginService);
+    localStorage.setItem("id",JSON.stringify('id'))
   });
 
   it('should be created', () => {

@@ -37,7 +37,7 @@ export class CurrentprofileComponent implements OnInit {
 
   ngOnInit() {
     this.message = '';
-    this.getProfile(this.route.snapshot.paramMap.get('id'));
+    this.getProfile(this.route.snapshot.paramMap.get('user'));
     
   }
   handleFileInput(file : FileList){
@@ -50,8 +50,8 @@ export class CurrentprofileComponent implements OnInit {
     
   }
 
-  getProfile(id){
-    this.profileService.get(id).subscribe(data => {
+  getProfile(user){
+    this.profileService.get(user).subscribe(data => {
       this.currentProfile=data;
       console.log(data);
     },
@@ -67,7 +67,7 @@ export class CurrentprofileComponent implements OnInit {
      upload.append('contacts',this.contacts);
      upload.append('displayname',this.displayname);
     
-    this.profileService.update(this.currentProfile.id,upload).subscribe(
+    this.profileService.update(this.currentProfile.user,upload).subscribe(
       response => {
         console.log(response);
         this.show=false

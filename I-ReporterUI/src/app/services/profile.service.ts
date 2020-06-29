@@ -12,15 +12,15 @@ export class ProfileService {
 
   constructor(private http: HttpClient) { }
 
-  get(id) {
-    return this.http.get(`${singleProfileUrl}/${id}`);
+  get(user) {
+    return this.http.get(`${singleProfileUrl}/${user}`);
   }
 
   create(data) {
     return this.http.post(allProfilesUrl, data);
   }
 
-  update(id, data) {
-    return this.http.put(`${singleProfileUrl}/${id}`, data);
+  update(user, data) {
+    return this.http.put(`${singleProfileUrl}/${user}`, data);
   }
 }
