@@ -42,10 +42,11 @@
       </div>
     </div><!-- End -->
     <div class="col-md-6  ">
-        <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChoseLocation($event)">
+        <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChoseLocation($event)" [zoom]=13>
           <agm-marker 
           [latitude]="latitude" 
           [longitude]="longitude"
+          [color]="blue"
           
           style="color: black;"
           ></agm-marker>
