@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,HttpHeaders } from '@angular/common/http';
 
 const baseUrl='http://localhost:8000/';
 
@@ -8,13 +8,16 @@ const baseUrl='http://localhost:8000/';
 })
 export class InterventionRecordService {
   searchdata:any
+  token=JSON.parse(localStorage.getItem('token'));
+  headers=new HttpHeaders().set("Authorization",`Bearer ${this.token}` )
+  
   constructor(private http:HttpClient) { }
 
   create(data){
     return this.http.post(`${baseUrl}api/intervention-record/create/`,data)
   }
   getAll(){
-    return this.http.get(`${baseUrl}api/intervention-records/`)
+    return this.http.get(`${baseUrl}api/intervention-records/`,{headers:this.headers});
   }
   get(id){
     return this.http.get(`${baseUrl}api/intervention-record/detail/${id}`);

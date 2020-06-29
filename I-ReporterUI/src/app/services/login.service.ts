@@ -13,6 +13,6 @@ export class LoginService {
 
   login(data):Observable<any>{
     console.log("Server Response");
-    return this.http.post(`${baseUrl}login/`, data);
+    return this.http.post(`${baseUrl}api/login/`, data);
   }
 }
