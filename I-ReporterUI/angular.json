@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+            
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/ngx-toastr/toastr.css",
 
@@ -129,5 +130,5 @@
   "cli": {
     "analytics": false
   }
-
+ 
 }

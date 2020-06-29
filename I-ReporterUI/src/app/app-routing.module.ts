@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {SearchListComponent} from './components/search-list/search-list.component'
+import {NavComponent} from '../app/nav/nav.component'
 import { AuthComponent } from './auth/auth.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './home/home.component';
@@ -11,6 +13,15 @@ import { InterventionRecordDetailsComponent } from './components/intervention-re
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
+  {path:'add/new-intervention-record',component:AddInterventionRecordComponent},
+  {path:'intervention-record/all',component:InterventionRecordListComponent},
+  {path:'intervention-record/:id',component:InterventionRecordDetailsComponent},
+
+  {path: "profile/:id", component: CurrentprofileComponent},
+  {path: "create/profile", component:ProfileComponent}, 
+  {path: 'login', component: LoginComponent},
+  {path: '', redirectTo:"/", pathMatch:"full"},
+  {path:'search-list/:title',component:SearchListComponent},
   { path: 'signup', component: AuthComponent },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
