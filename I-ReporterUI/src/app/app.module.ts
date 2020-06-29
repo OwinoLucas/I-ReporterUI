@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToastrModule } from 'ngx-t
+import {  ToastrModule } from "ngx-toastr";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,10 +11,6 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { CurrentprofileComponent } from './components/currentprofile/currentprofile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NavComponent } from './nav/nav.component';
@@ -25,7 +21,7 @@ import { HomeComponent } from './home/home.component';
   declarations: [
     AppComponent,
     ProfileComponent,
-    CurrentprofileComponent
+    CurrentprofileComponent,
     LoginComponent,
     NavbarComponent,
     NavComponent,
@@ -38,7 +34,6 @@ import { HomeComponent } from './home/home.component';
     HttpClientModule,
     NgProgressModule.forRoot(),
     NgProgressHttpClientModule,
-    NgbModule,
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
