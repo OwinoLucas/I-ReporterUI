@@ -207,7 +207,9 @@ body.modal-open #wrap{
     color: #fff;
     text-decoration: none;
   }  
-
+  agm-map{
+    height: 400px;
+  }
   /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) { #contatti{padding-bottom: 800px;}
 #contatti .maps iframe{
