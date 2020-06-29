@@ -11,7 +11,7 @@ export class FlagapiService {
   constructor(private http:HttpClient) { }
 
   create(data){
-    return this.http.post(`${baseUrl}/create/`,data)
+    return this.http.post(`${baseUrl}flags/create/`,data)
   }
   getAll(){
     return this.http.get(`${baseUrl}flags/`)

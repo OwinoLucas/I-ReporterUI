@@ -3,20 +3,20 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <!-- details card section starts from here -->
-<div *ngIf='flag'>
+<div *ngIf='flags'>
 
 <section class="details-card">
     <h1 class="main-header">All Flag Records</h1>
     <div class="container">
         <div class="row">
-            <div class="col-md-4" *ngFor ="let item of flags;">
+            <div class="col-md-4" *ngFor ="let flag of flags;">
                 <div class="card-content">
                     <div class="card-img">
-											<!--
-                        <img src="{{interventionrecord.image}}" alt="https://res.cloudinary.com/dkkqfs44i/image/upload/v1593270129/media/images/intervention_default_al92r5.jpg">
-                        <span><h4>{{interventionrecord.title}}</h4></span>
+
+                        <img src="{{flag.image}}" alt="img">
+                        <span><h4>{{flag.title}}</h4></span>
                     </div>
-										-->
+
                     <div class="card-desc">
                         <h3>{{flag.title}}</h3>
                         <p>{{flag.description}}</p>
@@ -27,7 +27,7 @@
             </div>
 
         </div>
-    </div>
+
 		</div>
 </section>
 </div>

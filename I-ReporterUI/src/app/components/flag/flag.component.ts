@@ -90,16 +90,5 @@ export class FlagComponent implements OnInit {
       });
 
   }
-//   newIntervention(){
-//     this.submitted=false;
-//     this.interventionrecord={
-//     title:'',
-//     description:'',
-//     status:'Under Investigation',
 
-
-//     };
-//     image:File;
-//     this.video:File;
-//   }
 }
