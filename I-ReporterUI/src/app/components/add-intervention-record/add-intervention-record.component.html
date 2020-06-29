@@ -1,0 +1,42 @@
+
+<div class="submit-form">
+  <div *ngIf="!submitted">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" class="form-control" id="title" required [(ngModel)]="title" name="title" />
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input class="form-control" id="description" required [(ngModel)]="description" name="description" />
+    </div>
+
+    <div class="form-group">
+      <label for="image">Image</label>
+      <input type="file" (change)="onIMageChanged($event)" id="image" required [(ngModel)]="image" name="image" />
+    </div>
+
+    <div class="form-group">
+      <label for="videos">VIdeo</label>
+      <input (change)="onVideoChanged($event)" id="videos" required [(ngModel)]="videos" type="file" name="videos" />
+    </div>
+
+
+    <button (click)="saveInterventionRecord()" class="btn btn-danger">Submit</button>
+    <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChoseLocation($event)">
+      <agm-marker 
+      [latitude]="latitude" 
+      [longitude]="longitude"
+      *ngIf="locationmark"
+      style="color: black;"
+      ></agm-marker>
+  </agm-map>
+  </div>
+
+
+  
+  <!-- <div *ngIf="submitted">
+      <h4>You submitted successfully!</h4>
+      <button class="btn btn-success" (click)="newIntervention()">Add</button>
+    </div>
+  </div> -->
