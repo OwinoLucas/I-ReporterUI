@@ -20,7 +20,7 @@ export class NavComponent implements OnInit {
     this.interventionrecordservice.getbytitle(this.title)
     .subscribe(
       data=>{  
-        this.router.navigate([`search-list/${this.title}`],{state:{data:{ data}}})
+        this.router.navigate([`search-list/${this.title}`]);
         this.interventionrecords=data
         const datasearch=data
         console.log(data)

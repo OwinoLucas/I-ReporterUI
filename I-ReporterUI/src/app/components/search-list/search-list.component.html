@@ -1,1 +1,32 @@
 <p>search-list works!</p>
+
+
+<!------ Include the above in your HEAD tag ---------->
+
+<!-- details card section starts from here -->
+<div *ngIf='searchdata'>
+    
+    <section class="details-card">
+        <h1 class="main-header">INTERVENTION RECORDS</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4" *ngFor ="let searchd of searchdata;">
+                    <div class="card-content">
+                        <div class="card-img">
+                            <img src="{{searchd.image}}" alt="https://res.cloudinary.com/dkkqfs44i/image/upload/v1593270129/media/images/intervention_default_al92r5.jpg">
+                            <span><h4>{{searchd.title}}</h4></span>
+                        </div>
+                        <div class="card-desc">
+                            <h3>{{searchd.title}}</h3>
+                            <p>{{searchd.description}}</p>
+                                <a href="intervention-record/{{searchd.id}}" class="btn-card">Read</a>  
+          
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    </div>
+    <!-- details card section starts from here -->

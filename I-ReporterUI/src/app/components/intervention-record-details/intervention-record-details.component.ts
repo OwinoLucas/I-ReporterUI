@@ -43,6 +43,7 @@ export class InterventionRecordDetailsComponent implements OnInit {
         data=>{
           this.editlatitude=parseInt( data['latitude'])
           this.editlongitude=parseInt( data['longitude'])
+          this.edittitle=data['title']
           console.log(this.editlongitude)
           this.intervention_record=data;
           console.log(data);

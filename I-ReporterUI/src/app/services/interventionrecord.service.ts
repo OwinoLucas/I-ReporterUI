@@ -7,7 +7,7 @@ const baseUrl='http://localhost:8000/';
   providedIn: 'root'
 })
 export class InterventionRecordService {
-
+  searchdata:any
   constructor(private http:HttpClient) { }
 
   create(data){
@@ -26,6 +26,8 @@ export class InterventionRecordService {
     return this.http.put(`${baseUrl}intervention-record-detail/${id}/`,data)
   }
   getbytitle(title){
+    this.searchdata= this.http.get(`${baseUrl}intervention-records/${title}`).subscribe(data=>{this.searchdata=data});
+    console.log(this.searchdata)
     return this.http.get(`${baseUrl}intervention-records/${title}`);
   }
 }
