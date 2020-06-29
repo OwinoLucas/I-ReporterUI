@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { InterventionRecordService} from 'src/app/services/interventionrecord.service'
-import { InterventionRecordListComponent } from '../components/intervention-record-list/intervention-record-list.component';
-import { error } from '@angular/compiler/src/util';
+import { InterventionRecordService} from 'src/app/services/interventionrecord.service';
 import {Router} from '@angular/router'
 @Component({
   selector: 'app-nav',

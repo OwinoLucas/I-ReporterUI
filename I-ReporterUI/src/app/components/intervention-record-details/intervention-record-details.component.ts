@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { InterventionRecordService} from 'src/app/services/interventionrecord.service';
 import {ActivatedRoute,Route, Router} from '@angular/router';
 import {ToastrService} from 'ngx-toastr';
-import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-intervention-record-details',
@@ -129,17 +128,6 @@ export class InterventionRecordDetailsComponent implements OnInit {
         uploadData.append('longitude',this.editlongitude.toString())
       }
       console.log(uploadData)
-      // const data= new FormData()
-      // const edittitle=this.intervention_record.title
-      // const editdescription=this.intervention_record.description
-      // const editstatus=this.intervention_record.status;
-      // const editimage:File=this.intervention_record.image;
-    
-      // const editvideos:File=this.intervention_record.videos;
-      // const editlatitude=this.intervention_record.latitude;
-      // const editlongitude=
-
-  // longitude: 37.075142 ;
       this.interventionrecordservice.putrecord(this.intervention_record.id,uploadData)
       .subscribe(
         data=>{

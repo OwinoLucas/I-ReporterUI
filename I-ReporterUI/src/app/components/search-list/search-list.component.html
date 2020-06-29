@@ -1,13 +1,10 @@
-<p>search-list works!</p>
 
 
-<!------ Include the above in your HEAD tag ---------->
 
-<!-- details card section starts from here -->
 <div *ngIf='searchdata'>
     
     <section class="details-card">
-        <h1 class="main-header">INTERVENTION RECORDS</h1>
+        <h1 class="main-header">Found <span style="color: red;">{{searchdata.length}}</span> related record....</h1>
         <div class="container">
             <div class="row">
                 <div class="col-md-4" *ngFor ="let searchd of searchdata;">

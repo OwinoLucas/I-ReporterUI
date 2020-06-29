@@ -78,12 +78,7 @@
 
 <!-- ****************************** modal class -->
 <div class="container">
-
   <div class="container">
-    <!-- <h2>Modal Example</h2> -->
-    <!-- Trigger the modal with a button -->
-
-
     <!-- Modal -->
     <div class="modal fade" id="myModal">
       <div class="modal-dialog">
@@ -126,9 +121,6 @@
 
           <div class="row" style="height:550px;">
             <div class="col-md-6 maps">
-              <!-- <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11880.492291371422!2d12.4922309!3d41.8902102!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x28f1c82e908503c4!2sColosseo!5e0!3m2!1sit!2sit!4v1524815927977"
-                frameborder="0" style="border:0" allowfullscreen></iframe> -->
               <agm-map [latitude]="editlatitude" [longitude]="editlongitude" (mapClick)="onChoseLocation($event)">
                 <agm-marker [latitude]="editlatitude" [longitude]="editlongitude" style="color: black;"></agm-marker>
               </agm-map>
