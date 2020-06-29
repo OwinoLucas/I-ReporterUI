@@ -4,10 +4,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
+import { GoogleMapsModule } from '@angular/google-maps'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AddInterventionRecordComponent } from './components/add-intervention-record/add-intervention-record.component';
+import { AgmCoreModule } from '@agm/core';
+import { InterventionRecordListComponent } from './components/intervention-record-list/intervention-record-list.component';
+import { InterventionRecordDetailsComponent } from './components/intervention-record-details/intervention-record-details.component';
+import { CommonModule } from '@angular/common';
+
+
+
 import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
@@ -21,6 +29,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
 @NgModule({
   declarations: [
     AppComponent,
+    AddInterventionRecordComponent,
+    InterventionRecordListComponent,
+    InterventionRecordDetailsComponent,
     ProfileComponent,
     CurrentprofileComponent,
     LoginComponent,
@@ -34,6 +45,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    GoogleMapsModule,
+    CommonModule,
+    BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
@@ -43,7 +57,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
       timeOut: 5000,
       positionClass: 'toast-top-center',
       preventDuplicates: true,
-    })
+    }),
+    AgmCoreModule.forRoot({
+      // apiKey:'AIzaSyAU4NQxFttNiM906LqaPSb3xrjOyzhvE9E'
+    }),
   ],
   providers: [SignupService],
   bootstrap: [AppComponent]

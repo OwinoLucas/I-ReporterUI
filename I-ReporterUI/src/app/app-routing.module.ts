@@ -5,14 +5,20 @@ import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { CurrentprofileComponent } from './components/currentprofile/currentprofile.component';
+import { AddInterventionRecordComponent } from './components/add-intervention-record/add-intervention-record.component';
+import { InterventionRecordListComponent } from './components/intervention-record-list/intervention-record-list.component';
+import { InterventionRecordDetailsComponent } from './components/intervention-record-details/intervention-record-details.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   { path: 'signup', component: AuthComponent },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
-  { path: "create/profile", component: ProfileComponent },
-  { path: "profile/:id", component: CurrentprofileComponent },
+  { path: 'create/profile', component: ProfileComponent },
+  { path: 'profile/:id', component: CurrentprofileComponent },
+  { path: 'add/new-intervention-record', component: AddInterventionRecordComponent },
+  { path: 'intervention-record/all', component: InterventionRecordListComponent },
+  { path: 'intervention-record/:id', component: InterventionRecordDetailsComponent },
   { path: '**', component: NotFoundComponent },
 
 
