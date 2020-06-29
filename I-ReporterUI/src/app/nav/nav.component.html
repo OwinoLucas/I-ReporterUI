@@ -1,8 +1,24 @@
-<ul class="nav nav-tabs bg-dark">
+<ul class="nav nav-tabs">
   <a class="navbar-brand" routerLink="home">I REPORTER <i class="icon-play-circle icon-large"></i> </a>
-  <div class="spacer"></div>
+
+  <div class="spacer">
+    <li class="nav-item">
+
+      <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
+        <div class="input-group">
+          <input class="form-control mr-sm-2" [(ngModel)]='title' type="text" placeholder="Search for records..."
+            aria-label="Search">
+          <button (click)="searchinterventionrecord()" class="btn bg-info btn-rounded btn-sm my-0"
+            type="submit">Search</button>
+        </div>
+      </div>
+
+    </li>
+  </div>
+
   <li class="nav-item">
-    <a class="nav-link " data-toggle="tab" routerLink="home">Home<span class="sr-only">(current)</span></a>
+
+    <a class="nav-link " data-toggle="tab" routerLink="home">Home<span class="sr-only">(current)</span></a>>
   </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"

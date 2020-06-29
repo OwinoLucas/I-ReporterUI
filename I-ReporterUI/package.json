@@ -19,15 +19,31 @@
     "@angular/core": "~9.0.6",
     "@angular/forms": "~9.0.6",
     "@angular/google-maps": "^9.2.4",
+<<<<<<< HEAD
+=======
+
+>>>>>>> 40595af62eff6e25f33adc62c43b1a5fb3a58b89
     "@angular/localize": "~9.0.6",
     "@angular/material": "^9.2.4",
+<<<<<<< HEAD
+=======
+
+>>>>>>> 40595af62eff6e25f33adc62c43b1a5fb3a58b89
     "@angular/platform-browser": "~9.0.6",
     "@angular/platform-browser-dynamic": "~9.0.6",
     "@angular/router": "~9.0.6",
     "@ng-bootstrap/ng-bootstrap": "^6.1.0",
+<<<<<<< HEAD
     "@ngx-progressbar/core": "^3.0.2",
     "@ngx-progressbar/http-client": "^3.0.2",
     "@types/jquery": "^3.5.0",
+=======
+    "@types/jquery": "^3.5.0",
+    "leaflet": "^1.5.1",
+  
+    "@ngx-progressbar/core": "^3.0.2",
+    "@ngx-progressbar/http-client": "^3.0.2",
+>>>>>>> 40595af62eff6e25f33adc62c43b1a5fb3a58b89
     "bootstrap": "^4.5.0",
     "jquery": "^3.5.1",
     "leaflet": "^1.5.1",
@@ -48,9 +64,15 @@
     "@angular/language-service": "~9.0.6",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+<<<<<<< HEAD
     "@types/jquery": "^3.5.0",
     "@types/node": "^12.11.1",
     "bootstrap": "^4.5.0",
+=======
+    "@types/node": "^12.11.1",
+    "bootstrap": "^4.5.0",
+    "@types/jquery": "^3.5.0",
+>>>>>>> 40595af62eff6e25f33adc62c43b1a5fb3a58b89
     "codelyzer": "^5.1.2",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
