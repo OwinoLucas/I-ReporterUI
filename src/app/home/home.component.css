@@ -13,3 +13,6 @@ h1 ,h5 , p{
     background-color: white;
     font-family: 'Domine', serif;
 }
+body {
+    margin: 10px;
+}
