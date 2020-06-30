@@ -1,17 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from './../services/login.service';
+import { Router, ActivatedRoute } from '@angular/router';
 import { InterventionRecordService} from 'src/app/services/interventionrecord.service';
-import {Router} from '@angular/router'
+
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-
-  constructor(
-    private interventionrecordservice:InterventionRecordService,
-    private router:Router
-    ) { }
+  user=null;
+  user_id=null;
+  profile_id=null;
+  
+  constructor(private loginService: LoginService, private route: ActivatedRoute, private router: Router, 
+              private interventionrecordservice:InterventionRecordService) { }
+  
   title:''
   interventionrecords:any;
   searchinterventionrecord(){
@@ -29,7 +33,9 @@ export class NavComponent implements OnInit {
       }
     )
   }
-  ngOnInit(): void {
+ 
+  ngOnInit() {
+    this.user_id=localStorage.getItem('id')
   }
 
   logoutProcess(){

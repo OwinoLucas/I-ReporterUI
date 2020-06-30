@@ -16,7 +16,6 @@ import { FlagdetailComponent }from './components/flagdetail/flagdetail.component
 import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
-  { path: "profile/:id", component: CurrentprofileComponent },
   { path: "create/profile", component: ProfileComponent, canActivate:[AuthGuard] },
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: "/", pathMatch: "full" },
@@ -24,7 +23,7 @@ const routes: Routes = [
   { path: 'signup', component: AuthComponent },
   { path: 'home', component: HomeComponent, canActivate:[AuthGuard] },
   { path: 'login', component: LoginComponent },
- 
+  { path: 'profile/:user', component: CurrentprofileComponent },
   { path: 'add/new-intervention-record', component: AddInterventionRecordComponent },
   { path: 'intervention-record/all', component: InterventionRecordListComponent },
   { path: 'intervention-record/:id', component: InterventionRecordDetailsComponent },
