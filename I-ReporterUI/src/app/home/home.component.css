@@ -1,0 +1,76 @@
+#carouselExampleCaptions {
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: left;
+}
+
+.carousel-inner>.carousel-item>img {
+  height: 100vh;
+  width: 100%;
+}
+
+/* h1,
+h5,
+p {
+  opacity: 0.5;
+  color: black;
+  background-color: white;
+  font-family: 'Domine', serif;
+  top: 0;
+  margin-top: -32em;
+} */
+
+.carousel-caption {
+  margin-top: -2em;
+}
+
+#w {
+  opacity: 0.85;
+  color: black;
+  background-color: white;
+  font-family: 'Domine', serif;
+  top: 0;
+  margin-top: -33em;
+
+
+}
+
+#e {
+  opacity: 0.85;
+  color: black;
+  background-color: white;
+  font-family: 'Domine', serif;
+  top: 0;
+  margin-top: -1em;
+  font-size: large;
+}
+
+#r {
+  opacity: 0.85;
+  color: black;
+  background-color: white;
+  font-family: 'Domine', serif;
+  top: 0;
+  margin-top: -45em;
+  font-size: larger;
+}
+
+#t {
+  opacity: 0.85;
+  color: black;
+  background-color: white;
+  font-family: 'Domine', serif;
+  top: 0;
+  margin-top: -46em;
+  font-size: larger;
+}
+
+#y {
+  opacity: 0.85;
+  color: black;
+  background-color: white;
+  font-family: 'Domine', serif;
+  top: 0;
+  margin-top: -33em;
+  font-size: larger;
+}

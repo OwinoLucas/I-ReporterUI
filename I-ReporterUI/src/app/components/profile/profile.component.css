@@ -1,0 +1,28 @@
+body {
+  height: 760px;
+  font-family: '';
+  margin-top: 20px;
+}
+
+.card {
+  margin-left: 230px;
+  margin-right: 230px;
+  background-color: whitesmoke;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #000;
+  top: 2vh;
+}
+
+.submit-form {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.update {
+  margin-left: 230px;
+}
+
+h1 {
+  font-size: 50px;
+}

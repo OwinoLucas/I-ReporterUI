@@ -1,0 +1,41 @@
+<ul class="nav nav-tabs bg-dark">
+  <a class="navbar-brand" routerLink="/home">I REPORTER <i class="icon-play-circle icon-large"></i> </a>
+  <li class="nav-item">
+    <div class="input-group">
+      <input class="form-control mr-sm-2" [(ngModel)]='title' type="text" placeholder="Search for records..."
+        aria-label="Search">
+      <button (click)="searchinterventionrecord()" class="btn bg-info btn-rounded btn-sm my-0"
+        type="submit">Search</button>
+    </div>
+  </li>
+  <div class="spacer"></div>
+  <li class="nav-item">
+    <a class="nav-link " data-toggle="tab" routerLink="/home">Home<span class="sr-only">(current)</span></a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+      aria-expanded="false">Account</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" routerLink="create/profile">Profile</a>
+      <a class="dropdown-item" routerLink="#">Log Out</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" routerLink="/signup">Sign Up</a>
+      <a class="dropdown-item" routerLink="/login">Log In</a>
+    </div>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+      aria-expanded="false">Records</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" routerLink="#">Red Flags</a>
+      <a class="dropdown-item" routerLink="add/new-intervention-record">Interventions</a>
+    </div>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " routerLink="#">About Us</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " routerLink="#">Team</a>
+  </li>
+
+</ul>
