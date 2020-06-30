@@ -1,17 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { GoogleMapsModule } from '@angular/google-maps'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
-
 import { ProfileComponent } from './components/profile/profile.component';
 import { CurrentprofileComponent } from './components/currentprofile/currentprofile.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AgmCoreModule} from '@agm/core';
 import { AppComponent } from './app.component';
 import { AddInterventionRecordComponent } from './components/add-intervention-record/add-intervention-record.component';
-import { AgmCoreModule } from '@agm/core';
 import { InterventionRecordListComponent } from './components/intervention-record-list/intervention-record-list.component';
 import { InterventionRecordDetailsComponent } from './components/intervention-record-details/intervention-record-details.component';
 import { CommonModule } from '@angular/common';
@@ -22,11 +21,19 @@ import { SearchListComponent } from './components/search-list/search-list.compon
 import { AuthComponent } from './auth/auth.component';
 import { SignupService } from './signup.service';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { FlagComponent} from './components/flag/flag.component';
+import { FlagslistComponent } from './components/flagslist/flagslist.component';
+import { FlagdetailComponent } from './components/flagdetail/flagdetail.component';
+import { ImageUploadComponent } from './components/image-upload/image-upload.component'
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    FlagComponent,
+    FlagslistComponent,
+    FlagdetailComponent,
+    ImageUploadComponent,
     AddInterventionRecordComponent,
     InterventionRecordListComponent,
     InterventionRecordDetailsComponent,
@@ -43,6 +50,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    GoogleMapsModule,
     HttpClientModule,
     CommonModule,
     ReactiveFormsModule,
@@ -57,6 +65,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     }),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAU4NQxFttNiM906LqaPSb3xrjOyzhvE9E'
+
     }),
   ],
   providers: [SignupService],
