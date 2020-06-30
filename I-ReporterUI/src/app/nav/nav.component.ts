@@ -32,4 +32,10 @@ export class NavComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  logoutProcess(){
+    
+    localStorage.removeItem("token");
+    this.router.navigate(["/login"])
+  }
+
 }
