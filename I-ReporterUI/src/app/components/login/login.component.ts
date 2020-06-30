@@ -40,8 +40,8 @@ export class LoginComponent implements OnInit {
         if (result.success) {
           console.log(result);
           console.log(result.user_details.token)
-          localStorage.setItem('token',JSON.stringify(result.user_details.token))
-          // alert(result.msg);
+          localStorage.setItem('token', JSON.stringify(result.user_details.token))
+          console.log(result.user_details.token)
           this.showSuccess();
           this.router.navigate(["/home"])
         } else {
@@ -51,8 +51,8 @@ export class LoginComponent implements OnInit {
         error => {
           console.log(error.error)
           // alert(error.error.msg);
-          
-          
+
+
           this.showError();
         }
       )
