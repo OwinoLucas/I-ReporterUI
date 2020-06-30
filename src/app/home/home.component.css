@@ -7,7 +7,7 @@
     height: 100vh;
     width: 100%;
 }
-h1 ,h5 , p{
+.home ,p ,h1 ,h5 {
     opacity: 0.5;
     color: black;
     background-color: white;
@@ -15,4 +15,9 @@ h1 ,h5 , p{
 }
 body {
     margin: 10px;
+}
+.about *{
+    text-align: center;
+    font-style: oblique;
+    color: #111816;
 }
