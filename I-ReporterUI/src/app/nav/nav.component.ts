@@ -15,20 +15,8 @@ export class NavComponent implements OnInit {
   constructor(private loginService: LoginService, private route: ActivatedRoute, private router: Router) { }
  
   ngOnInit() {
-    this.finduser(this.route.snapshot.paramMap.get('email'))
-  }
-  finduser(email){
-    this.loginService.getuser(email)
-      .subscribe(
-        data => {
-          this.user=data
-          console.log(data)
-          
-        },
-        error => {
-          console.log(error)
-        }
-      )
+    this.user_id=localStorage.getItem('id')
+    
   }
   
 }

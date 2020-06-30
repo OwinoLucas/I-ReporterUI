@@ -20,6 +20,7 @@ export class CurrentprofileComponent implements OnInit {
   bio:'';
   contacts:'';
   displayname:'';
+  user:any;
   redflag: string='/assets/download.png'
   intervention='/assets/images.jpeg'
   back: string='/assets/download(1).jpeg'
@@ -61,16 +62,18 @@ export class CurrentprofileComponent implements OnInit {
   }
 
   updateProfile(){
+    const user= localStorage.getItem('id')
     const upload=new FormData();
      upload.append('profile_picture',this.profile_picture,this.profile_picture.name);
      upload.append('bio',this.bio);
      upload.append('contacts',this.contacts);
      upload.append('displayname',this.displayname);
     
-    this.profileService.update(this.currentProfile.user,upload).subscribe(
+    this.profileService.update(user,upload).subscribe(
       response => {
         console.log(response);
         this.show=false
+        this.router.navigate([`profile/${user}`]) 
       },
       error => {
         console.log(error);

@@ -8,23 +8,26 @@
   <div class="container">
     <div class="">
       <br>
-    <h1 class="text-center">User Profile</h1>
+      <h1 class="text-center">User Profile</h1>
     </div>
-
     <div class="row">
       <div class="col-md-5">
-        <div class="">
+        <div *ngIf="currentProfile.profile_picture">
           <img src="{{currentProfile.profile_picture}}" class="" alt="profile-picture" height="400px" width="400px">
+        </div>
+        <div *ngIf="!currentProfile.profile_picture">
+          <img [src]="imageUrl" height="400px" width="400px">
         </div>
       </div>
       <div class="col-md-5">
-        <div class="card" id="info">
+        <div *ngIf="currentProfile.bio" class="card" id="info">
           <h4>{{currentProfile.displayname}}</h4>
           <h5>{{currentProfile.bio}}</h5>
           <h5>Contacts: {{currentProfile.contacts}}</h5>
           <br>
           <br>
         </div>
+        
         <div *ngIf="show" class="card" id="card">
           <div class="edit-form">
             <h2 class="text-center">Edit Your Profile</h2>
@@ -50,17 +53,21 @@
                 name="profile_picture" (change)="handleFileInput($event.target.files)" placeholder="profile picture" />
             </div>
             <div class="update">
-              <a routerLink="/profile/{{currentProfile.id}}"><button type="submit" class="btn btn-success"
+              <a routerLink="profile/{{user}}"><button type="submit" class="btn btn-success"
                   (click)="updateProfile()" id="refresh">Update</button></a>
               <button class="btn btn-danger" (click)="hideForm()" id="hide">Cancel</button>
             </div>
           </div>
         </div>
-
-
+        <div *ngIf="!currentProfile.bio">
+          <div class="card" id="card1">
+            <h4>Your Name</h4>
+            <h4>Your bio</h4>
+            <h4>Your Contacts</h4>
+          </div>
+        </div>
       </div>
-
-      <div class="col-md-2">
+      <div class="col-md-2" >
         <br>
         <br>
         <br>
@@ -69,10 +76,5 @@
     </div>
     <br>
     <br>
-
-
-
-
   </div>
-
 </body>

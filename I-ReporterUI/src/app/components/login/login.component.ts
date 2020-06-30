@@ -40,14 +40,16 @@ export class LoginComponent implements OnInit {
     if (this.formGroup.valid) {
       this.loginService.login(this.formGroup.value).subscribe(result => {
         if (result.success) {
-          
           // alert(result.msg);
+         
           this.showSuccess();
           this.router.navigate(["home"]) 
           
-
-        } else {
+          localStorage.setItem('id',result.user_details.id)
+        }
+        else {
           alert(result.msg);
+          localStorage.setItem('id',result.user_details.id)
         }
       },
         error => {
