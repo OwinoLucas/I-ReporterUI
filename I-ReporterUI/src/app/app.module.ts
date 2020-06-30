@@ -23,7 +23,6 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { FlagComponent } from './components/flag/flag.component';
 import { FlagslistComponent } from './components/flagslist/flagslist.component';
 import { FlagdetailComponent } from './components/flagdetail/flagdetail.component';
-import { ImageUploadComponent } from './components/image-upload/image-upload.component'
 
 
 @NgModule({
@@ -32,7 +31,6 @@ import { ImageUploadComponent } from './components/image-upload/image-upload.com
     FlagComponent,
     FlagslistComponent,
     FlagdetailComponent,
-    ImageUploadComponent,
     AddInterventionRecordComponent,
     InterventionRecordListComponent,
     InterventionRecordDetailsComponent,

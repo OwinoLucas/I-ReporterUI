@@ -1,3 +1,11 @@
+body {
+  background-image: url("../../../assets/inter.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+}
+
 .map-container {
   position: absolute;
   top: 0;
@@ -5,6 +13,11 @@
   right: 0;
   bottom: 0;
   margin: 30px;
+}
+
+.container-fluid {
+  opacity: 0.87;
+
 }
 
 .map-frame {
@@ -18,4 +31,20 @@
 
 agm-map {
   height: 600px;
+}
+
+.btn {
+  background: none;
+  border: 2px solid black;
+  padding: 10px 10px;
+  width: 100px;
+  margin: 10px 10px;
+  border-radius: 15px;
+  transition: 0.6s;
+  float: right;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
 }

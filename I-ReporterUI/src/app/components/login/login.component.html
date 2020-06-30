@@ -5,7 +5,7 @@
       <div class="col-12 col-sm-6 col-md-3">
         <form class="login" [formGroup]="formGroup" (ngSubmit)="loginProcess()">
           <legend><strong>Login</strong></legend> <img src="../../../assets/login2.jpg" class="img">
-
+          <hr>
           <div class="form-group">
 
             <input type="email" placeholder="Email" formControlName="email" class="form-control" id="email" required>
@@ -28,6 +28,7 @@
           </div>
 
           <button type="submit" class="btn">Submit</button>
+          <hr>
           <p>Do you need an account? <a routerLink="/signup">Sign Up</a></p>
         </form>
       </div>
