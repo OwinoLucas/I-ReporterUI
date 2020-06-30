@@ -4,8 +4,6 @@ body {
   height: 100%;
   width: 100%;
   opacity: 0.8;
-
-
 }
 
 .login {
@@ -21,6 +19,7 @@ body {
   border-bottom-right-radius: 100px;
   transition: 0.3s;
   opacity: 0.7;
+  margin-left: 60px;
 }
 
 .login input[type="email"],
@@ -46,6 +45,16 @@ body {
 .login input[type="password"]:focus {
   border-left: 40px solid black;
 
+}
+
+h3 {
+  font-size: larger;
+
+}
+
+.img {
+  height: 80px;
+  width: 90px;
 }
 
 .btn {

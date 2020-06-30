@@ -6,10 +6,10 @@
         <form class="signup" *ngIf="!displayAccountSuccessfullyCreatedSection; else signupSuccessMessage;"
           [formGroup]="newUserForm" role="form" (ngSubmit)="onSubmit(newUserForm)">
           <div class="form-group">
-            <legend>Create account</legend>
+            <legend><strong>Create Account</strong></legend>
           </div>
           <div class="form-group">
-            <label class="control-label" for="firstName">First name</label>
+
             <input id="firstName" type="text" placeholder="First name" class="form-control" formControlName="firstName">
 
             <div class="invalidInput" *ngIf="(
@@ -35,7 +35,7 @@
 
           </div>
           <div class="form-group">
-            <label class="control-label" for="lastName">Last name</label>
+
             <input id="lastName" type="text" placeholder="Last name" class="form-control" formControlName="lastName">
             <div class="invalidInput"
               *ngIf="(newUserForm.controls['lastName'].hasError('maxlength')) && newUserForm.controls['lastName'].touched">
@@ -52,7 +52,7 @@
             </div>
           </div>
           <div class="form-group">
-            <label class="control-label" for="signupEmail">Email</label>
+
             <input id="signupEmail" type="email" placeholder="Email" class="form-control" formControlName="email">
             <div class="invalidInput" *ngIf="(
                                                 newUserForm.controls['email'].hasError('required') || 
@@ -78,8 +78,8 @@
 
           </div>
           <div class="form-group">
-            <label class="control-label" for="signupPassword">Password</label>
-            <input id="signupPassword" type="password" class="form-control" placeholder=" Enter at least 6 characters"
+
+            <input id="signupPassword" type="password" class="form-control" placeholder="Password"
               formControlName="password">
             <div class="invalidInput" *ngIf="(
                                                   newUserForm.controls['password'].hasError('required') || 
@@ -104,7 +104,7 @@
 
           </div>
           <div class="form-group">
-            <label class="control-label" for="signupPasswordagain">Confirm password</label>
+
             <input id="signupPasswordagain" type="password" placeholder="Confirm password" class="form-control"
               formControlName="confirmPassword">
             <div class="invalidInput" *ngIf="(
@@ -143,7 +143,7 @@
         <ng-template #signupSuccessMessage>
           <p class="form-group" style="font-size: larger;">Your account has been successfully created.</p>
           <hr>
-          <p>Proceed to sign in? <a routerLink="/login">Sign in</a></p>
+          <p>Proceed to sign in? <a routerLink="/login">Sign In</a></p>
         </ng-template>
       </div>
     </div>
