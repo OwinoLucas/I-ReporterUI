@@ -1,22 +1,23 @@
-<div class="container">
+<body>
+
   <div class="row">
     <div class="panel panel-primary">
       <div class="panel-body">
-        <form *ngIf="!displayAccountSuccessfullyCreatedSection; else signupSuccessMessage;" [formGroup]="newUserForm"
-          role="form" (ngSubmit)="onSubmit(newUserForm)">
+        <form class="signup" *ngIf="!displayAccountSuccessfullyCreatedSection; else signupSuccessMessage;"
+          [formGroup]="newUserForm" role="form" (ngSubmit)="onSubmit(newUserForm)">
           <div class="form-group">
             <legend>Create account</legend>
           </div>
           <div class="form-group">
             <label class="control-label" for="firstName">First name</label>
-            <input id="firstName" type="text" class="form-control" formControlName="firstName">
+            <input id="firstName" type="text" placeholder="First name" class="form-control" formControlName="firstName">
 
             <div class="invalidInput" *ngIf="(
-                                              newUserForm.controls['firstName'].hasError('required') || 
-                                              newUserForm.controls['firstName'].hasError('nullvalidator') ||
-                                              newUserForm.controls['firstName'].hasError('maxlength')
-                                            ) &&
-                                            newUserForm.controls['firstName'].touched">
+                                                newUserForm.controls['firstName'].hasError('required') || 
+                                                newUserForm.controls['firstName'].hasError('nullvalidator') ||
+                                                newUserForm.controls['firstName'].hasError('maxlength')
+                                              ) &&
+                                              newUserForm.controls['firstName'].touched">
               <div>
                 <span><svg aria-hidden="true" fill="currentColor" focusable="false" width="16px" height="16px"
                     viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
@@ -35,7 +36,7 @@
           </div>
           <div class="form-group">
             <label class="control-label" for="lastName">Last name</label>
-            <input id="lastName" type="text" class="form-control" formControlName="lastName">
+            <input id="lastName" type="text" placeholder="Last name" class="form-control" formControlName="lastName">
             <div class="invalidInput"
               *ngIf="(newUserForm.controls['lastName'].hasError('maxlength')) && newUserForm.controls['lastName'].touched">
               <div>
@@ -52,13 +53,13 @@
           </div>
           <div class="form-group">
             <label class="control-label" for="signupEmail">Email</label>
-            <input id="signupEmail" type="email" class="form-control" formControlName="email">
+            <input id="signupEmail" type="email" placeholder="Email" class="form-control" formControlName="email">
             <div class="invalidInput" *ngIf="(
-                                              newUserForm.controls['email'].hasError('required') || 
-                                              newUserForm.controls['email'].hasError('nullvalidator') ||
-                                              newUserForm.controls['email'].hasError('email')
-                                            ) &&
-                                            newUserForm.controls['email'].touched">
+                                                newUserForm.controls['email'].hasError('required') || 
+                                                newUserForm.controls['email'].hasError('nullvalidator') ||
+                                                newUserForm.controls['email'].hasError('email')
+                                              ) &&
+                                              newUserForm.controls['email'].touched">
               <div>
                 <span><svg aria-hidden="true" fill="currentColor" focusable="false" width="16px" height="16px"
                     viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
@@ -78,14 +79,14 @@
           </div>
           <div class="form-group">
             <label class="control-label" for="signupPassword">Password</label>
-            <input id="signupPassword" type="password" class="form-control" placeholder="at least 6 characters"
+            <input id="signupPassword" type="password" class="form-control" placeholder=" Enter at least 6 characters"
               formControlName="password">
             <div class="invalidInput" *ngIf="(
-                                                newUserForm.controls['password'].hasError('required') || 
-                                                newUserForm.controls['password'].hasError('nullvalidator') ||
-                                                newUserForm.controls['password'].hasError('minlength')
-                                              ) &&
-                                              newUserForm.controls['password'].touched">
+                                                  newUserForm.controls['password'].hasError('required') || 
+                                                  newUserForm.controls['password'].hasError('nullvalidator') ||
+                                                  newUserForm.controls['password'].hasError('minlength')
+                                                ) &&
+                                                newUserForm.controls['password'].touched">
               <div>
                 <span><svg aria-hidden="true" fill="currentColor" focusable="false" width="16px" height="16px"
                     viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
@@ -103,14 +104,15 @@
 
           </div>
           <div class="form-group">
-            <label class="control-label" for="signupPasswordagain">Password again</label>
-            <input id="signupPasswordagain" type="password" class="form-control" formControlName="confirmPassword">
+            <label class="control-label" for="signupPasswordagain">Confirm password</label>
+            <input id="signupPasswordagain" type="password" placeholder="Confirm password" class="form-control"
+              formControlName="confirmPassword">
             <div class="invalidInput" *ngIf="(
-                                              newUserForm.controls['confirmPassword'].hasError('required') || 
-                                              newUserForm.controls['confirmPassword'].hasError('nullvalidator') ||
-                                              newUserForm.controls['confirmPassword'].value != newUserForm.controls['password'].value
-                                            ) &&
-                                            newUserForm.controls['confirmPassword'].touched">
+                                                newUserForm.controls['confirmPassword'].hasError('required') || 
+                                                newUserForm.controls['confirmPassword'].hasError('nullvalidator') ||
+                                                newUserForm.controls['confirmPassword'].value != newUserForm.controls['password'].value
+                                              ) &&
+                                              newUserForm.controls['confirmPassword'].touched">
               <div>
                 <span><svg aria-hidden="true" fill="currentColor" focusable="false" width="16px" height="16px"
                     viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
@@ -130,7 +132,7 @@
 
           </div>
           <div class="form-group">
-            <button id="signupSubmit" type="submit" class="btn btn-info btn-block">Create your account</button>
+            <button id="signupSubmit" type="submit" class="btn ">Sign Up</button>
           </div>
           <p class="form-group">By creating an account, you agree to our <a href="#">Terms of Use</a> and our <a
               href="#">Privacy Policy</a>.</p>
@@ -146,4 +148,5 @@
       </div>
     </div>
   </div>
-</div>
+
+</body>

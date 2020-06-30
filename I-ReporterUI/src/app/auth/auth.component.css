@@ -1,5 +1,41 @@
+body {
+  background-image: url("../../assets/signup.jpg");
+  background-size: cover;
+  height: 150%;
+  width: 100%;
+  opacity: 0.8;
+}
+
 form {
   margin: 15px 10px;
+  text-align: center;
+}
+
+.signup input[type="text"],
+.signup input[type="email"],
+.signup input[type="password"] {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 10px;
+  text-align: center;
+  width: 250px;
+  background: none;
+  border: 2px solid black;
+  border-radius: 15px;
+  transition: 0.3s;
+
+}
+
+.signup input[type="text"]:focus,
+.signup input[type="email"]:focus,
+.signup input[type="password"]:focus {
+  border-left: 40px solid black;
+}
+
+.signup input[type="text"]:hover,
+.signup input[type="email"]:hover,
+.signup input[type="password"]:hover {
+  border-left: 40px solid black;
 }
 
 h2 {
@@ -7,8 +43,36 @@ h2 {
   margin-bottom: 2px;
 }
 
-.container {
-  max-width: 360px;
+.signup {
+  background: #fff;
+  width: 400px;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #000;
+  position: absolute;
+  top: 15vh;
+  text-align: center;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  transition: 0.3s;
+  opacity: 0.7;
+  margin-left: 90px;
+
+}
+
+.btn {
+  background: none;
+  border: 2px solid black;
+  padding: 10px 10px;
+  width: 100px;
+  margin: 10px 10px;
+  border-radius: 15px;
+  transition: 0.6s;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
 }
 
 .divider {

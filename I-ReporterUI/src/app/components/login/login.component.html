@@ -1,32 +1,37 @@
-<div class="container-fluid">
+<body>
+  <div class="container-fluid">
 
-  <div class="row justify-content-center">
-    <div class="col-12 col-sm-6 col-md-3">
-      <form class="form-container" [formGroup]="formGroup" (ngSubmit)="loginProcess()">
-        <h3 class="input-header" style="text-align: center;">Login</h3>
-        <div class="form-group">
-          <label for="email">Email address</label>
-          <input type="email" placeholder="Email" formControlName="email" class="form-control" id="email" required>
-          <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
-            <div *ngIf="email.errors.required">
-              Email is required.
+    <div class="row justify-content-center">
+      <div class="col-12 col-sm-6 col-md-3">
+        <form class="login" [formGroup]="formGroup" (ngSubmit)="loginProcess()">
+          <h3 class="input-header" style="text-align: center;">Login</h3>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" placeholder="Email" formControlName="email" class="form-control" id="email" required>
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+              <div *ngIf="email.errors.required">
+                Email is required.
+              </div>
+            </div>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" placeholder="Password" formControlName="password" class="form-control" id="password">
+            <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+              <div *ngIf="password.errors.required">
+                Password is required.
+              </div>
             </div>
           </div>
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 
-        </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" placeholder="Password" formControlName="password" class="form-control" id="password">
-          <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
-            <div *ngIf="password.errors.required">
-              Password is required.
-            </div>
-          </div>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-block">Submit</button>
-      </form>
+          <button type="submit" class="btn">Submit</button>
+          <p>Do you need an account? <a routerLink="/signup">Sign Up</a></p>
+        </form>
+      </div>
     </div>
+
   </div>
-</div>
+
+</body>

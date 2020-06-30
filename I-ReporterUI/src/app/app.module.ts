@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { GoogleMapsModule } from '@angular/google-maps'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -8,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './components/profile/profile.component';
 import { CurrentprofileComponent } from './components/currentprofile/currentprofile.component';
 import { AppRoutingModule } from './app-routing.module';
-import { AgmCoreModule} from '@agm/core';
+import { AgmCoreModule } from '@agm/core';
 import { AppComponent } from './app.component';
 import { AddInterventionRecordComponent } from './components/add-intervention-record/add-intervention-record.component';
 import { InterventionRecordListComponent } from './components/intervention-record-list/intervention-record-list.component';
@@ -21,7 +20,7 @@ import { SearchListComponent } from './components/search-list/search-list.compon
 import { AuthComponent } from './auth/auth.component';
 import { SignupService } from './signup.service';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { FlagComponent} from './components/flag/flag.component';
+import { FlagComponent } from './components/flag/flag.component';
 import { FlagslistComponent } from './components/flagslist/flagslist.component';
 import { FlagdetailComponent } from './components/flagdetail/flagdetail.component';
 import { ImageUploadComponent } from './components/image-upload/image-upload.component'
@@ -50,7 +49,6 @@ import { ImageUploadComponent } from './components/image-upload/image-upload.com
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    GoogleMapsModule,
     HttpClientModule,
     CommonModule,
     ReactiveFormsModule,
