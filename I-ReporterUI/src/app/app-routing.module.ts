@@ -13,17 +13,16 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { FlagComponent} from './components/flag/flag.component';
 import { FlagslistComponent } from './components/flagslist/flagslist.component';
 import { FlagdetailComponent }from './components/flagdetail/flagdetail.component';
+import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
-  { path: "profile/:id", component: CurrentprofileComponent },
-  { path: "create/profile", component: ProfileComponent },
+  { path: "create/profile", component: ProfileComponent, canActivate:[AuthGuard] },
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: "/", pathMatch: "full" },
   { path: 'search-list/:title', component: SearchListComponent },
   { path: 'signup', component: AuthComponent },
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent, canActivate:[AuthGuard] },
   { path: 'login', component: LoginComponent },
-  { path: 'create/profile', component: ProfileComponent },
   { path: 'profile/:user', component: CurrentprofileComponent },
   { path: 'add/new-intervention-record', component: AddInterventionRecordComponent },
   { path: 'intervention-record/all', component: InterventionRecordListComponent },

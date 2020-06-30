@@ -37,5 +37,11 @@ export class NavComponent implements OnInit {
   ngOnInit() {
     this.user_id=localStorage.getItem('id')
   }
-  
+
+  logoutProcess(){
+    
+    localStorage.removeItem("token");
+    this.router.navigate(["/login"])
+  }
+
 }

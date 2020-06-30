@@ -3,7 +3,8 @@
   <div class="row justify-content-center">
     <div class="col-12 col-sm-6 col-md-3">
       <form class="form-container" [formGroup]="formGroup" (ngSubmit)="loginProcess()">
-        <h3 class="input-header" style="text-align: center;">Login</h3>
+        <legend class="input-header">Login</legend>
+        <br>
         <div class="form-group">
           <label for="email">Email address</label>
           <input type="email" placeholder="Email" formControlName="email" class="form-control" id="email" required>
@@ -25,7 +26,7 @@
           </div>
         </div>
 
-        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        <button type="submit" class="btn btn-info btn-block">Submit</button>
       </form>
     </div>
   </div>

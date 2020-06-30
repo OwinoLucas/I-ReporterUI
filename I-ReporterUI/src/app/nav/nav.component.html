@@ -17,7 +17,7 @@
       aria-expanded="false">Account</a>
     <div class="dropdown-menu">
       <a class="dropdown-item" routerLink="profile/{{user_id}}">Profile</a>
-      <a class="dropdown-item" routerLink="#">Log Out</a>
+      <a class="dropdown-item" (click) = "logoutProcess()">Log Out</a>
       <div class="dropdown-divider"></div>
       <a class="dropdown-item" routerLink="/signup">Sign Up</a>
       <a class="dropdown-item" routerLink="/login">Log In</a>
