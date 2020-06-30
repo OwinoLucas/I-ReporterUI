@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'create/profile', component: ProfileComponent },
-  { path: 'profile/:id', component: CurrentprofileComponent },
+  { path: 'profile/:user', component: CurrentprofileComponent },
   { path: 'add/new-intervention-record', component: AddInterventionRecordComponent },
   { path: 'intervention-record/all', component: InterventionRecordListComponent },
   { path: 'intervention-record/:id', component: InterventionRecordDetailsComponent },
