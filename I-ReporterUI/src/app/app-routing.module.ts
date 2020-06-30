@@ -10,6 +10,9 @@ import { InterventionRecordListComponent } from './components/intervention-recor
 import { InterventionRecordDetailsComponent } from './components/intervention-record-details/intervention-record-details.component';
 import { SearchListComponent } from './components/search-list/search-list.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { FlagComponent} from './components/flag/flag.component';
+import { FlagslistComponent } from './components/flagslist/flagslist.component';
+import { FlagdetailComponent }from './components/flagdetail/flagdetail.component';
 
 const routes: Routes = [
   { path: "profile/:id", component: CurrentprofileComponent },
@@ -27,9 +30,10 @@ const routes: Routes = [
   { path: 'intervention-record/:id', component: InterventionRecordDetailsComponent },
   { path: 'search-list/:title', component: SearchListComponent },
   { path: '**', component: NotFoundComponent },
+  { path:'add/new-flag',component:FlagComponent},
+  { path:'flags/all',component:FlagslistComponent},
+  { path:'flag/:id',component:FlagdetailComponent},
 
-
-  { path: '', redirectTo: "/", pathMatch: "full" },
 ];
 
 @NgModule({
