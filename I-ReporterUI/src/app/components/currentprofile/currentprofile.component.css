@@ -11,9 +11,19 @@ body {
   top: 2vh;
   background-color: whitesmoke;
 }
+#card1{
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #000;
+  top: 2vh;
+  background-color: whitesmoke;
+}
 
 h4 {
   font-size: 35px;
+}
+h5{
+  font-size: 20px;
 }
 
 h1 {

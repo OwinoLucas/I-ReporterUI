@@ -13,22 +13,20 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { FlagComponent } from './components/flag/flag.component';
 import { FlagslistComponent } from './components/flagslist/flagslist.component';
 import { FlagdetailComponent } from './components/flagdetail/flagdetail.component';
+import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
-  { path: "profile/:id", component: CurrentprofileComponent },
-  { path: "create/profile", component: ProfileComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'search-list/:title', component: SearchListComponent },
   { path: 'signup', component: AuthComponent },
-  { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'create/profile', component: ProfileComponent },
-  { path: 'profile/:id', component: CurrentprofileComponent },
-  { path: 'add/new-intervention-record', component: AddInterventionRecordComponent },
+  { path: 'create/profile', component: ProfileComponent, canActivate: [AuthGuard] },
+  { path: 'search-list/:title', component: SearchListComponent },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'profile/:user', component: CurrentprofileComponent, canActivate: [AuthGuard] },
+  { path: 'add/new-intervention-record', component: AddInterventionRecordComponent, canActivate: [AuthGuard] },
   { path: 'intervention-record/all', component: InterventionRecordListComponent },
   { path: 'intervention-record/:id', component: InterventionRecordDetailsComponent },
   { path: 'search-list/:title', component: SearchListComponent },
-  { path: 'add/new-flag', component: FlagComponent },
+  { path: 'add/new-flag', component: FlagComponent, canActivate: [AuthGuard] },
   { path: 'flags/all', component: FlagslistComponent },
   { path: 'flag/:id', component: FlagdetailComponent },
   { path: '**', component: NotFoundComponent },
