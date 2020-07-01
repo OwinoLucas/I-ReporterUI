@@ -69,8 +69,11 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">×</button>
+            <!--
             <h4 class="modal-title">Location for:{{flag_record.title}}</h4>
+-->
           </div>
+
           <div class="modal-body">
             <div class="card card-body">
               <agm-map [latitude]="editlatitude" [longitude]="editlongitude" (mapClick)="onChoseLocation($event)">
@@ -103,9 +106,9 @@
 
           <div class="row" style="height:550px;">
             <div class="col-md-6 maps">
-              <!-- <iframe
+               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11880.492291371422!2d12.4922309!3d41.8902102!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x28f1c82e908503c4!2sColosseo!5e0!3m2!1sit!2sit!4v1524815927977"
-                frameborder="0" style="border:0" allowfullscreen></iframe> -->
+                frameborder="0" style="border:0" allowfullscreen></iframe>
               <agm-map [latitude]="editlatitude" [longitude]="editlongitude" (mapClick)="onChoseLocation($event)">
                 <agm-marker [latitude]="editlatitude" [longitude]="editlongitude" style="color: black;"></agm-marker>
               </agm-map>
@@ -122,7 +125,7 @@
                     </div>
 
                   </div>
-                  <!--
+
                   <div class="col-lg-6">
                     <div class="form-group">
                       <input type="file" id="editimage" name="editimage" [(ngModel)]="editimage"
@@ -138,7 +141,7 @@
                       <label for="image"><a href="{{intervention_record.videos}}">IMAGE LINK</a></label>
                     </div>
                   </div>
-                -->
+
                   <div class="col-12">
                     <div class="form-group" id="exampleFormControlTextarea1">
                       <textarea type="edittext" id="editdescription" name="editdescription" class="form-control mt-2"
@@ -165,7 +168,7 @@
     </div>
   </div>
 </div>
-<!-- ********************video modal000
+
 <div class="modal fade " id="videomodal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
   aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -174,5 +177,5 @@
     </div>
   </div>
 </div>
--->
+
 <!-- ********************************8EDIT MODUL END************************* -->

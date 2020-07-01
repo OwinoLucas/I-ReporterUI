@@ -36,7 +36,7 @@
       </div><!-- End -->
       <div class="col-md-6  ">
 
-        <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChoseLocation($event)">
+        <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChoseLocation($event)" [zoom]=13>
           <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
         </agm-map>
       </div>
@@ -44,8 +44,3 @@
     </div>
   </div>
 </body>
-<!-- <div *ngIf="submitted">
-      <h4>You submitted successfully!</h4>
-      <button class="btn btn-success" (click)="newIntervention()">Add</button>
-    </div>
-  </div> -->

@@ -9,11 +9,7 @@ import { FlagapiService } from 'src/app/services/flagapi.service';
 export class FlagslistComponent implements OnInit {
 
   flags:any;
-  /*
-  title="";
-  description='';
-  tags="";
-*/
+  
   constructor(private flagapiservice:FlagapiService) { }
 
   ngOnInit(): void { this.retrieveFlags();
