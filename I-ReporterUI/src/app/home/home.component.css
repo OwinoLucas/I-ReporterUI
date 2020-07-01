@@ -1,4 +1,84 @@
-.container {
-  background-image: url("../../assets/pics/img2.jpg");
-  margin-top: 4px;
+#carouselExampleCaptions {
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: left;
+}
+
+.carousel-inner>.carousel-item>img {
+  height: 100vh;
+  width: 100%;
+}
+
+/* h1,
+h5,
+p {
+  opacity: 0.5;
+  color: black;
+  background-color: white;
+  font-family: 'Domine', serif;
+  top: 0;
+  margin-top: -32em;
+} */
+
+.carousel-caption {
+  margin-top: -2em;
+}
+
+#w {
+  opacity: 0.85;
+  color: black;
+  background-color: white;
+  font-family: 'Domine', serif;
+  top: 0;
+}
+
+#e {
+  opacity: 0.85;
+  color: black;
+  background-color: white;
+  font-family: 'Domine', serif;
+  top: 0;
+  font-size: large;
+}
+
+#r {
+  opacity: 0.85;
+  color: black;
+  background-color: white;
+  font-family: 'Domine', serif;
+  top: 0;
+  font-size: larger;
+}
+
+#t {
+  opacity: 0.85;
+  color: black;
+  background-color: white;
+  font-family: 'Domine', serif;
+  top: 0;
+  font-size: larger;
+}
+
+#y {
+  opacity: 0.85;
+  color: black;
+  background-color: white;
+  font-family: 'Domine', serif;
+  top: 0;
+  font-size: larger;
+}
+
+.about * {
+  text-align: center;
+  font-style: oblique;
+  color: #111816;
+  font-size: larger;
+}
+
+.footer {
+  text-align: center;
+}
+
+i {
+  padding: 2px;
 }

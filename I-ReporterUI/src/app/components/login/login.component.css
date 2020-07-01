@@ -1,8 +1,73 @@
-.form-container{
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px #000;
-    position: absolute;
-    top: 15vh;
+body {
+  background-image: url("../../../assets/login.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+}
+
+.login {
+  background: #fff;
+  width: 450px;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #000;
+  position: absolute;
+  top: 15vh;
+  text-align: center;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  transition: 0.3s;
+  opacity: 0.7;
+  margin-left: 760px;
+}
+
+.login input[type="email"],
+.login input[type="password"] {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 10px;
+  text-align: center;
+  width: 250px;
+  background: none;
+  border: 2px solid black;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.login input[type="email"]:hover,
+.login input[type="password"]:hover {
+  border-left: 40px solid black;
+
+}
+
+.login input[type="email"]:focus,
+.login input[type="password"]:focus {
+  border-left: 40px solid black;
+
+}
+
+h3 {
+  font-size: larger;
+
+}
+
+.img {
+  height: 80px;
+  width: 90px;
+}
+
+.btn {
+  background: none;
+  border: 2px solid black;
+  padding: 10px 10px;
+  width: 100px;
+  margin: 10px 10px;
+  border-radius: 15px;
+  transition: 0.6s;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
 }

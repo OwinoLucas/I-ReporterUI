@@ -1,0 +1,54 @@
+.map-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 30px;
+}
+
+.map-frame {
+  border: 2px solid black;
+  height: 100%;
+}
+
+#map {
+  height: 100%;
+}
+
+agm-map {
+  height: 600px;
+}
+
+body {
+  background-image: url("../../../assets/log3.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+}
+
+.container-fluid {
+  opacity: 0.85;
+
+}
+
+.form-group input[type="text"] {
+  border: 1px solid black;
+}
+
+.btn {
+  background: none;
+  border: 2px solid black;
+  padding: 10px 10px;
+  width: 100px;
+  margin: 10px 10px;
+  border-radius: 15px;
+  transition: 0.6s;
+  float: right;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+}

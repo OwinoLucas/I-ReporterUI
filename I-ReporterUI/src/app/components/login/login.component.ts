@@ -12,7 +12,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   formGroup: FormGroup;
-
+  dat: any;
   constructor(private loginService: LoginService, private toastr: ToastrService, private route: ActivatedRoute, private router: Router) { }
 
   showSuccess() {
@@ -25,6 +25,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.initForm();
+
+
   }
 
   initForm() {
@@ -35,19 +37,30 @@ export class LoginComponent implements OnInit {
   }
 
   loginProcess() {
-    if(this.formGroup.valid) {
+    if (this.formGroup.valid) {
       this.loginService.login(this.formGroup.value).subscribe(result => {
-        if(result.success) {
+        if (result.success) {
           console.log(result);
+          console.log(result.user_details.token)
+          localStorage.setItem('token', JSON.stringify(result.user_details.token))
           // alert(result.msg);
+
           this.showSuccess();
-          this.router.navigate(["/"])
-        }else {
+
+          this.router.navigate(["home"])
+
+          localStorage.setItem('id', result.user_details.id)
+        }
+        else {
           alert(result.msg);
-        }},
-        error =>  {
+          localStorage.setItem('id', result.user_details.id)
+        }
+      },
+        error => {
           console.log(error.error)
           // alert(error.error.msg);
+
+
           this.showError();
         }
       )

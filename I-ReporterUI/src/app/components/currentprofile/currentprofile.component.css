@@ -1,28 +1,60 @@
-body{
-  font-family: '';
-  height: 910px;
+body {
+  background-image: url("../../../assets/log2.jpg");
+  color: white;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
 }
 
-#card{
+p {
+  font-size: larger;
+}
+
+#card {
+  margin-bottom: 20px;
+  color: #000;
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px #000;
   top: 2vh;
   background-color: whitesmoke;
 }
-h4{
+
+#card1 {
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #000;
+  top: 2vh;
+  background-color: whitesmoke;
+}
+
+h4 {
   font-size: 35px;
 }
-h1{
+
+h5 {
+  font-size: 20px;
+}
+
+h1 {
   font-size: 50px;
 }
-.row{
-  margin-top: 30px;
+
+.img {
+
+  margin-left: 400px;
 }
-.update{
+
+.info {
+  margin-top: 100px;
+}
+
+.update {
   margin-left: 20px;
 }
-#info{
+
+#info {
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px #000;
@@ -30,6 +62,6 @@ h1{
   background-color: whitesmoke;
 }
 
-#hide{
+#hide {
   margin-left: 2px;
 }
