@@ -1,3 +1,11 @@
 .container {
   margin-top: 140px;
 }
+
+.text-center {
+  background-image: url("../../assets/1280.jpeg");
+  background-size: cover;
+  height: auto;
+  width: 100%;
+  opacity: 0.8;
+}

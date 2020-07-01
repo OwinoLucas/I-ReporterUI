@@ -146,7 +146,7 @@ export class InterventionRecordDetailsComponent implements OnInit {
       .subscribe(
         data => {
           console.log(data);
-          this.router.navigate(['intervention-record/all']);
+          this.router.navigate(['/intervention-record/all']);
         },
         error => {
           console.log(error)

@@ -1,17 +1,27 @@
 body {
-  font-family: '';
-  height: 910px;
-  margin-top: 20px;
+  background-image: url("../../../assets/log2.jpg");
+  color: white;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+}
+
+p {
+  font-size: larger;
 }
 
 #card {
+  margin-bottom: 20px;
+  color: #000;
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px #000;
   top: 2vh;
   background-color: whitesmoke;
 }
-#card1{
+
+#card1 {
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px #000;
@@ -22,7 +32,8 @@ body {
 h4 {
   font-size: 35px;
 }
-h5{
+
+h5 {
   font-size: 20px;
 }
 
@@ -30,8 +41,13 @@ h1 {
   font-size: 50px;
 }
 
-.row {
-  margin-top: 30px;
+.img {
+
+  margin-left: 400px;
+}
+
+.info {
+  margin-top: 100px;
 }
 
 .update {

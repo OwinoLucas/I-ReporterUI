@@ -15,11 +15,11 @@ export class CurrentprofileComponent implements OnInit {
 
   currentProfile = null;
   message = "";
-  imageUrl: string = '/assets/user-512.png'
+  imageUrl: string = '/assets/prof.png'
   profile_picture: File;
   bio: '';
   contacts: '';
-  displayname: '';
+  username: '';
   user: any;
   redflag: string = '/assets/download.png'
   intervention = '/assets/images.jpeg'
@@ -62,7 +62,7 @@ export class CurrentprofileComponent implements OnInit {
     upload.append('profile_picture', this.profile_picture, this.profile_picture.name);
     upload.append('bio', this.bio);
     upload.append('contacts', this.contacts);
-    upload.append('displayname', this.displayname);
+    upload.append('username', this.username);
 
     this.profileService.update(user, upload).subscribe(
       response => {

@@ -11,7 +11,7 @@
               <div class="col-lg-10 col-xl-7 mx-auto">
                 <h2 class="">New Intervention Record</h2>
                 <hr>
-                <div class="form-group mb-3">
+                <div class="form-group mt-3 mb-3">
                   <label for="title">Title</label>
 
                   <input type="text" class="form-control  border-0 shadow-lg p-3 mb-5 px-4" id="title" required
@@ -36,7 +36,7 @@
         </div>
       </div><!-- End -->
       <div class="col-md-6  ">
-        <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChoseLocation($event)" [zoom]=13>
+        <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChoseLocation($event)">
           <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
         </agm-map>
       </div>

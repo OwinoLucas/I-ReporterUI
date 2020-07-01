@@ -16,7 +16,7 @@ import { FlagdetailComponent } from './components/flagdetail/flagdetail.componen
 import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
-  { path: 'signup', component: AuthComponent },
+  { path: '', component: AuthComponent },
   { path: 'login', component: LoginComponent },
   { path: 'create/profile', component: ProfileComponent, canActivate: [AuthGuard] },
   { path: 'search-list/:title', component: SearchListComponent },

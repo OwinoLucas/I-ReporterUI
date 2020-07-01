@@ -1,24 +1,20 @@
-<div class="container">
+<body>
   <div class="">
     <br>
-    <h1 class="text-center">User Profile</h1>
+    <h1 class="text-center">Profile</h1>
   </div>
   <div class="row">
     <div class="col-md-5">
-      <div>
-        <img src="{{currentProfile.profile_picture}}" class="" alt="profile-picture" height="400px" width="400px">
+      <div class="img">
+        <img src="../../../assets/prof.png" class="" alt="profile-picture" height="400px" width="400px">
       </div>
-      <div>
-        <img [src]="imageUrl" height="400px" width="400px">
-      </div>
-      ​
     </div>
     ​
     <div class="col-md-5">
-      <div class="card" id="info">
-        <h4>Username:{{currentProfile.displayname}}</h4>
-        <h5>Bio:{{currentProfile.bio}}</h5>
-        <h5>Contacts: {{currentProfile.contacts}}</h5>
+      <div class="info">
+        <p>Username:{{currentProfile.displayname}}</p>
+        <p>Bio:{{currentProfile.bio}}</p>
+        <p>Contacts: {{currentProfile.contacts}}</p>
         <br>
         <br>
       </div>
@@ -29,7 +25,7 @@
           <div class="form-group">
             <label for="displayname"></label>
             <input type="text" class="form-control" id="displayname" required [(ngModel)]="displayname"
-              name='displayname' placeholder="Display Name" />
+              name='displayname' placeholder="Username" />
           </div>
           <div class="form-group">
             <label for="bio"></label>
@@ -40,7 +36,7 @@
             <input type="text" class="form-control" id="contacts" required [(ngModel)]="contacts" name="contacts"
               placeholder="contacts" />
           </div>
-          <img [src]="imageUrl" style="width:120px;height:120px;">
+
           <div class="form-group">
             <label for="Profile Picture">Profile Picture</label>
             <input type="file" class="form-control" id="profile_picture" required [(ngModel)]="profile_picture"
@@ -52,10 +48,8 @@
           </div>
         </div>
       </div>
-      <div>
-      </div>
     </div>
   </div>
   <br>
   <br>
-</div>
+</body>

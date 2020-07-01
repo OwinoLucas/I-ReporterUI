@@ -86,7 +86,7 @@
           </div>
           <div class="modal-body">
             <div class="card card-body">
-              <agm-map [latitude]="editlatitude" [longitude]="editlongitude" [zoom]=13>
+              <agm-map [latitude]="editlatitude" [longitude]="editlongitude">
                 <a href="/">test<agm-marker [latitude]="editlatitude" [longitude]="editlongitude" style="color: black;">
                   </agm-marker></a>
               </agm-map>
@@ -117,8 +117,7 @@
 
           <div class="row" style="height:550px;">
             <div class="col-md-6 maps">
-              <agm-map [latitude]="editlatitude" [longitude]="editlongitude" [zoom]=13
-                (mapClick)="onChoseLocation($event)">
+              <agm-map [latitude]="editlatitude" [longitude]="editlongitude" (mapClick)="onChoseLocation($event)">
                 <agm-marker [latitude]="editlatitude" [longitude]="editlongitude" style="color: black;"></agm-marker>
               </agm-map>
             </div>
