@@ -91,4 +91,3 @@ export class FlagComponent implements OnInit {
   }
 
 }
-
