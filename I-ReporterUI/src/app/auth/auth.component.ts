@@ -8,6 +8,7 @@ import {
 } from '@angular/forms';
 import { SignupService } from '../signup.service';
 
+
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
@@ -68,6 +69,8 @@ export class AuthComponent implements OnInit {
             break;
         }
       },
+
+
       (err) => { },
     )
   }

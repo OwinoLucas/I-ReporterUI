@@ -22,24 +22,6 @@ section {
 }
 
 
-/* 
-.btn {
-  background: none;
-  border: 2px solid black;
-  float: ;
-  padding: 10px 10px;
-  width: 100px;
-  margin: 10px 10px;
-  border-radius: 15px;
-  transition: 0.6s;
-  float: right;
-}
-
-.btn:hover {
-  background-color: black;
-  color: white;
-} */
-
 
 .card-content {
   background: #ffffff;

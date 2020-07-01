@@ -67,3 +67,18 @@ p {
   top: 0;
   font-size: larger;
 }
+
+.about * {
+  text-align: center;
+  font-style: oblique;
+  color: #111816;
+  font-size: larger;
+}
+
+.footer {
+  text-align: center;
+}
+
+i {
+  padding: 2px;
+}

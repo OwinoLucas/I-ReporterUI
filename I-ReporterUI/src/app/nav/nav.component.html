@@ -4,41 +4,33 @@
     <div class="input-group">
       <input class="form-control mr-sm-2" [(ngModel)]='title' type="text" placeholder="Search for records..."
         aria-label="Search">
-      <button (click)="searchinterventionrecord()" class="btn bg-info btn-rounded btn-sm my-0"
-        type="submit">Search</button>
+      <button (click)="searchinterventionrecord()" class="btn bg-info btn-rounded btn-sm my-0" type="submit"><i
+          class="icon-search"></i></button>
     </div>
   </li>
   <div class="spacer"></div>
   <li class="nav-item">
-    <a class="nav-link " data-toggle="tab" routerLink="/home">Home<span class="sr-only">(current)</span></a>
-  </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-      aria-expanded="false">Account</a>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" routerLink="create/profile">Profile</a>
-      <a class="dropdown-item" (click)="logoutProcess()">Log Out</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" routerLink="/signup">Sign Up</a>
-      <a class="dropdown-item" routerLink="/login">Log In</a>
-    </div>
+    <a class="nav-link " data-toggle="tab" routerLink="/home">Home <i class="icon-home"></i><span
+        class="sr-only">(current)</span></a>
   </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
       aria-expanded="false">Records</a>
     <div class="dropdown-menu">
-      <a class="dropdown-item" routerLink="add/new-flag">Red Flags</a>
-      <a class="dropdown-item" routerLink="intervention-record/all">Interventions</a>
+      <a class="dropdown-item" routerLink="flags/all">Red Flags <i class="icon-flag"></i></a>
+      <a class="dropdown-item" routerLink="intervention-record/all">Interventions <i class="icon-warning-sign"></i></a>
     </div>
   </li>
-  <li class="nav-item">
-    <a class="nav-link " routerLink="#">About Us</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link " routerLink="#">Team</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" routerLink="profile/{{user_id}}">profile</a>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+      aria-expanded="false">Account </a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" routerLink="profile/{{user_id}}">Profile <i class="icon-user"></i></a>
+      <a class="dropdown-item" (click)="logoutProcess()">Log Out <i class="icon-signout"></i></a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" routerLink="/signup">Sign Up <i class="icon-signin"></i></a>
+      <a class="dropdown-item" routerLink="/login">Log In <i class="icon-spinner"></i> </a>
+    </div>
   </li>
 
 </ul>
