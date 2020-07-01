@@ -67,6 +67,7 @@ section {
 
 .card-desc {
   padding: 1.25rem;
+  background-color: gray;
 }
 
 .card-desc h3 {
@@ -123,3 +124,25 @@ a.btn-card {
 }
 
 /* End card section */
+.btn {
+  text-align: center;
+  margin-top: 30px;
+  background: none;
+  border: 2px solid white;
+  padding: 10px 10px;
+  width: 200px;
+  margin: 10px 10px;
+  border-radius: 55px;
+  transition: 0.6s;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+
+
+.btn:hover {
+  background-color: green;
+  color: white;
+}

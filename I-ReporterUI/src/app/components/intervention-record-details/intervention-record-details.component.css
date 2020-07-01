@@ -23,6 +23,16 @@ section {
   opacity: 0.8;
 }
 
+h5 {
+  font-size: 30px;
+  font-weight: bolder;
+
+}
+
+p {
+  font-size: larger;
+}
+
 .card-img {
   position: relative;
   overflow: hidden;
